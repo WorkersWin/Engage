@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Social media types</h1>
+
+<div id="social_media_types">
+  <% @social_media_types.each do |social_media_type| %>
+    <%= render social_media_type %>
+    <p>
+      <%= link_to "Show this social media type", social_media_type %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New social media type", new_social_media_type_path %>

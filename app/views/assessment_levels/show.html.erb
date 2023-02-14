@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @assessment_level %>
+
+<div>
+  <%= link_to "Edit this assessment level", edit_assessment_level_path(@assessment_level) %> |
+  <%= link_to "Back to assessment levels", assessment_levels_path %>
+
+  <%= button_to "Destroy this assessment level", @assessment_level, method: :delete %>
+</div>

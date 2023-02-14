@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Job titles</h1>
+
+<div id="job_titles">
+  <% @job_titles.each do |job_title| %>
+    <%= render job_title %>
+    <p>
+      <%= link_to "Show this job title", job_title %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New job title", new_job_title_path %>

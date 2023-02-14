@@ -1,0 +1,2 @@
+class AssessmentLevel < ApplicationRecord
+end

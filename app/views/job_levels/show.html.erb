@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @job_level %>
+
+<div>
+  <%= link_to "Edit this job level", edit_job_level_path(@job_level) %> |
+  <%= link_to "Back to job levels", job_levels_path %>
+
+  <%= button_to "Destroy this job level", @job_level, method: :delete %>
+</div>

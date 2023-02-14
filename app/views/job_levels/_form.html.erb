@@ -1,0 +1,27 @@
+<%= form_with(model: job_level) do |form| %>
+  <% if job_level.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(job_level.errors.count, "error") %> prohibited this job_level from being saved:</h2>
+
+      <ul>
+        <% job_level.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :level, style: "display: block" %>
+    <%= form.text_field :level %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
