@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Event types</h1>
+
+<div id="event_types">
+  <% @event_types.each do |event_type| %>
+    <%= render event_type %>
+    <p>
+      <%= link_to "Show this event type", event_type %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New event type", new_event_type_path %>
