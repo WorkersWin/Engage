@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Engage from Workers.Win is a Worker Engagement System designed to help Organize with Fellow Workers to Control the Conditions of Their Labor
 
-Things you may want to cover:
+This is free and open source software available under the AGPL v3.
 
-* Ruby version
+If you'd like to support the development of Engage you can purchase mugs and stickers and stuff at https://store.workers.win. Email if you'd like to support on a larger scale.
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
