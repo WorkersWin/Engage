@@ -1,23 +1,7 @@
-<div id="<%= dom_id contact %>">
 <tr>
-  <td>
-    <%= contact.first_name %>
-  </td>
-
-  <td>
-    <%= contact.last_name %>
-  </td>
-
-  <td>
-    <%= contact.pronouns %>
-  </td>
-
-  <td>
-    <%= contact.mobile_phone %>
-  </td>
-
-  <td>
-    <%= contact.personal_email %>
-  </td>
+  <td><%= link_to contact.first_name, contact %> </td>
+  <td><%= link_to contact.last_name, contact %></td>
+  <td><%= link_to contact.pronouns, contact %></td>
+  <td><%= link_to contact.mobile_phone, contact %></td>
+  <td><%= link_to contact.personal_email, contact %></td>
 </tr>
-</div>
