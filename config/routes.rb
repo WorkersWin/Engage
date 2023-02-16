@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :assessments
   resources :events
   resources :event_types
   resources :contacts

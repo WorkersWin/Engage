@@ -1,0 +1,37 @@
+<%= form_with(model: assessment) do |form| %>
+  <% if assessment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(assessment.errors.count, "error") %> prohibited this assessment from being saved:</h2>
+
+      <ul>
+        <% assessment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :assessed_on, style: "display: block" %>
+    <%= form.date_field :assessed_on %>
+  </div>
+
+  <div>
+    <%= form.label :assessment_level_id, style: "display: block" %>
+    <%= form.text_field :assessment_level_id %>
+  </div>
+
+  <div>
+    <%= form.label :assessor_id, style: "display: block" %>
+    <%= form.text_field :assessor_id %>
+  </div>
+
+  <div>
+    <%= form.label :assessee_id, style: "display: block" %>
+    <%= form.text_field :assessee_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
