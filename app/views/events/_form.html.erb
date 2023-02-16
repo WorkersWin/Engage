@@ -33,7 +33,7 @@
 
   <div>
     <%= form.label :event_type_id, style: "display: block" %>
-    <%= form.text_field :event_type_id %>
+    <%= collection_select(:event, :event_type_id, EventType.all.order(:name), :id, :name, include_blank: true) %>
   </div>
 
   <div>
