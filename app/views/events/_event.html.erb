@@ -1,27 +1,21 @@
-<div id="<%= dom_id event %>">
-  <p>
-    <strong>Name:</strong>
-    <%= event.name %>
-  </p>
+<tr>
+  <td>
+    <%= link_to event.name, event %>
+  </td>
+  <td>
+    <%= link_to event.event_type.name, event %>
+  </td>
 
-  <p>
-    <strong>Start datetime:</strong>
-    <%= event.start_datetime %>
-  </p>
+  <td>
+    <%= link_to event.start_datetime, event %>
+  </td>
 
-  <p>
-    <strong>End datetime:</strong>
-    <%= event.end_datetime %>
-  </p>
+  <td>
+    <%= link_to event.end_datetime, event %>
+  </td>
 
-  <p>
-    <strong>Description:</strong>
-    <%= event.description %>
-  </p>
+  <td>
+    <%= link_to event.description, event %>
+  </td>
 
-  <p>
-    <strong>Event type:</strong>
-    <%= event.event_type_id %>
-  </p>
-
-</div>
+</tr>
