@@ -1,7 +1,7 @@
 <tr>
-  <td><%= link_to contact.first_name, contact %> </td>
-  <td><%= link_to contact.last_name, contact %></td>
-  <td><%= link_to contact.pronouns, contact %></td>
-  <td><%= link_to contact.mobile_phone, contact %></td>
-  <td><%= link_to contact.personal_email, contact %></td>
+  <td><% if contact.first_name %><%= link_to contact.first_name, contact %><% end %></td>
+  <td><% if contact.last_name %><%= link_to contact.last_name, contact %><% end %></td>
+  <td><% if contact.pronouns %><%= link_to contact.pronouns, contact %><% end %></td>
+  <td><% if contact.mobile_phone %><%= link_to contact.mobile_phone, contact %><% end %></td>
+  <td><% if contact.personal_email %><%= link_to contact.personal_email, contact %><% end %></td>
 </tr>
