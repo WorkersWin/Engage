@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trained_on: 2023-02-16
+  contact: one
+  training: one
+
+two:
+  trained_on: 2023-02-16
+  contact: two
+  training: two

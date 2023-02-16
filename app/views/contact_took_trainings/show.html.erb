@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @contact_took_training %>
+
+<div>
+  <%= link_to "Edit this contact took training", edit_contact_took_training_path(@contact_took_training) %> |
+  <%= link_to "Back to contact took trainings", contact_took_trainings_path %>
+
+  <%= button_to "Destroy this contact took training", @contact_took_training, method: :delete %>
+</div>

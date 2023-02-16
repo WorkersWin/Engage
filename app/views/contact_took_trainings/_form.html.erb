@@ -1,0 +1,32 @@
+<%= form_with(model: contact_took_training) do |form| %>
+  <% if contact_took_training.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(contact_took_training.errors.count, "error") %> prohibited this contact_took_training from being saved:</h2>
+
+      <ul>
+        <% contact_took_training.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :trained_on, style: "display: block" %>
+    <%= form.date_field :trained_on %>
+  </div>
+
+  <div>
+    <%= form.label :contact_id, style: "display: block" %>
+    <%= form.text_field :contact_id %>
+  </div>
+
+  <div>
+    <%= form.label :training_id, style: "display: block" %>
+    <%= form.text_field :training_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

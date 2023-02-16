@@ -1,0 +1,2 @@
+module ContactTookTrainingsHelper
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_16_222526) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_16_234831) do
   create_table "assessment_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "level"
     t.text "description"
@@ -28,6 +28,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_222526) do
     t.index ["assessee_id"], name: "index_assessments_on_assessee_id"
     t.index ["assessment_level_id"], name: "index_assessments_on_assessment_level_id"
     t.index ["assessor_id"], name: "index_assessments_on_assessor_id"
+  end
+
+  create_table "contact_took_trainings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.date "trained_on"
+    t.bigint "contact_id", null: false
+    t.bigint "training_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_contact_took_trainings_on_contact_id"
+    t.index ["training_id"], name: "index_contact_took_trainings_on_training_id"
   end
 
   create_table "contacts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -101,5 +111,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_222526) do
   add_foreign_key "assessments", "assessment_levels"
   add_foreign_key "assessments", "contacts", column: "assessee_id"
   add_foreign_key "assessments", "contacts", column: "assessor_id"
+  add_foreign_key "contact_took_trainings", "contacts"
+  add_foreign_key "contact_took_trainings", "trainings"
   add_foreign_key "events", "event_types"
 end
