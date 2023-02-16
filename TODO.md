@@ -26,9 +26,11 @@ Adding items as they come up
 
 ## Events
 
-* attendees
+* attendees using autocomplete
 * event host / owner / location / note
 * need to display datetime in user's local time
+* Search with name autocomplete
+* Calendar view of events
 
 ## Issues
 
@@ -39,7 +41,7 @@ Adding items as they come up
 ## Notes
 
 * Creation
-* Linking to contacts, tasks, meetings, assessments
+* Linking to contacts, tasks, meetings, assessments, etc.
 
 ## Organizations
 
