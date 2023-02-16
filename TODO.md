@@ -26,9 +26,9 @@ Adding items as they come up
 
 ## Events
 
-* various types (OC meeting, union day, work session, protest, etc.)
 * attendees
 * event host / owner / location / note
+* need to display datetime in user's local time
 
 ## Issues
 
