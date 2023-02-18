@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Assessment levels</h1>
+<%= link_to "New assessment level", new_assessment_level_path %>
+<br />
+<br />
 
 <div id="assessment_levels">
   <% @assessment_levels.each do |assessment_level| %>
     <%= render assessment_level %>
-    <p>
-      <%= link_to "Show this assessment level", assessment_level %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New assessment level", new_assessment_level_path %>
