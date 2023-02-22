@@ -18,17 +18,17 @@
 
   <div>
     <%= form.label :assessment_level_id, style: "display: block" %>
-    <%= form.text_field :assessment_level_id %>
+    <%= collection_select(:assessment, :assessment_level_id, AssessmentLevel.all.order(:level), :id, :level, include_blank: true) %>
   </div>
 
   <div>
     <%= form.label :assessor_id, style: "display: block" %>
-    <%= form.text_field :assessor_id %>
+    <%= collection_select(:assessment, :assessor_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
 
   <div>
     <%= form.label :assessee_id, style: "display: block" %>
-    <%= form.text_field :assessee_id %>
+    <%= collection_select(:assessment, :assessee_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
 
   <div>

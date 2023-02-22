@@ -5,4 +5,8 @@ class Contact < ApplicationRecord
   has_many :assessee_assessments, class_name: 'Assessment', foreign_key: 'assessee_id'
   has_many :contact_took_trainings
   scope :current_assessment, -> { order('assessed_on desc').first }
+
+  def display_name
+    "#{first_name} #{last_name}"
+  end
 end
