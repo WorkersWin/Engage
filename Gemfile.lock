@@ -137,6 +137,9 @@ GEM
     nokogiri (1.14.2-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pagy (0.6.0)
+    pagy-extras (0.2.0)
+      pagy (~> 0.6)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -231,6 +234,8 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   mysql2 (~> 0.5)
+  pagy (~> 0.6.0)
+  pagy-extras (~> 0.2.0)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   selenium-webdriver
