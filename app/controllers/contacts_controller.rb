@@ -7,8 +7,8 @@ class ContactsController < ApplicationController
   end
 
   def search
-    @contacts = Contact.where('first_name like ?', "%#{params[:q]}%")
     @q = "#{params[:q]}"
+    @pagy, @contacts = pagy(Contact.where('first_name like ?', "%#{params[:q]}%")) if @q
   end
 
   # GET /contacts/1 or /contacts/1.json

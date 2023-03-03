@@ -8,10 +8,7 @@
 <% end %>
 
 <%= turbo_frame_tag :contacts do %>
-  <div id="search-result">
-    <%= pluralize(@contacts.count, 'contact') %> found
-  </div>
-
+<%== pagy_nav_bootstrap(@pagy) %>
   <div id="contacts-container">
     <% @contacts.each do |contact| %>
       <%= render contact %>
