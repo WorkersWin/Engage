@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :assessments
   resources :events
   resources :event_types
+  get 'contacts/search' => 'contacts#search'
   resources :contacts
   resources :assessment_levels
   resources :trainings

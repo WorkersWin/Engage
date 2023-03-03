@@ -8,8 +8,8 @@
 
 
 
-5000.times do |i|
-  Contact.create!(first_name: "first_name_#{i}", last_name: "last_name_#{i}", personal_email: "personal_email_#{i}", mobile_phone: "cellphone_#{i}")
+1000000.times do |i|
+  Contact.create!(first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", mobile_phone: "cellphone_#{i}")
 end
 
 AssessmentLevel.create!(level: "1")

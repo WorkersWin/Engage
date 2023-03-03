@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Contacts</h1>
+
+<p>Search Contacts</p>
+<%= form_with url: contacts_search_path, method: :get, data: {'turbo-frame': 'contacts'} do |form| %>
+  <% form.search_field :q, autofocus: true %>
+<% end %>
+
+<%= turbo_frame_tag :contacts do %>
+  <div id="search-result">
+    <%= pluralize(@contacts.count, 'contact') %> found
+  </div>
+
+  <div id="contacts-container">
+    <% @contacts.each do |contact| %>
+      <%= render contact %>
+    <% end %>
+  </div>
+<% end %>
+

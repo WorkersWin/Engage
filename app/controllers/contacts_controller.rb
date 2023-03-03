@@ -6,6 +6,11 @@ class ContactsController < ApplicationController
     @pagy, @contacts = pagy(Contact.all)
   end
 
+  def search
+    @contacts = Contact.where('first_name like ?', "%#{params[:q]}%")
+    @q = "#{params[:q]}"
+  end
+
   # GET /contacts/1 or /contacts/1.json
   def show
   end
