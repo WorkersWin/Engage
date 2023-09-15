@@ -46,6 +46,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_234831) do
     t.string "pronouns"
     t.string "mobile_phone"
     t.string "personal_email"
+    t.string "work_username"
+    t.string "work_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
