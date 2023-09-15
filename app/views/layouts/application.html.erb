@@ -11,7 +11,9 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    <header>
+      <%= render 'layouts/navbar' %>
+    </header>
     <div class="container-fluid">
       <% if notice %><p class="notice"><%= notice %></p><% end %>
       <% if alert %><p class="alert"><%= alert %></p><% end %>
