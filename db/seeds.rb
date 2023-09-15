@@ -8,7 +8,7 @@
 
 
 
-1000000.times do |i|
+1000.times do |i|
   Contact.create!(first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", mobile_phone: "cellphone_#{i}")
 end
 
