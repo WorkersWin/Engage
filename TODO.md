@@ -4,6 +4,7 @@ Adding items as they come up
 
 ## Asssessments
 
+* Created_by: user_id (to track who entered the record)
 * Real-time totals for the last 6 months displayed
 * Way to list all contacts in specific level
 
