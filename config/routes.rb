@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reports/assessments_by_level'
   resources :contact_took_trainings
   resources :assessments
   resources :events

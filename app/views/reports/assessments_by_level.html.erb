@@ -1,0 +1,15 @@
+<h1>Reports: Assessments by Level</h1>
+
+<table class="table table-hover">
+<thead>
+<tr><th>Level</th><th>Count</th></tr>
+</thead>
+<tbody>
+<% @assessments.each do |level| %>
+  <tr><td><%= AssessmentLevel.find(level[0]).level %></td><td><%= level[1] %></td></tr>
+<% end %>
+</tbody>
+<tfoot>
+  <tr><td>Total</td><td><%= @total %></td></tr>
+</tfoot>
+</table>

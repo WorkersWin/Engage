@@ -22,13 +22,13 @@
   </div>
 
   <div>
-    <%= form.label :assessor_id, style: "display: block" %>
-    <%= collection_select(:assessment, :assessor_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
+    <%= form.label :assessee_id, style: "display: block" %>
+    <%= collection_select(:assessment, :assessee_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
 
   <div>
-    <%= form.label :assessee_id, style: "display: block" %>
-    <%= collection_select(:assessment, :assessee_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
+    <%= form.label :assessor_id, style: "display: block" %>
+    <%= collection_select(:assessment, :assessor_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
 
   <div>
