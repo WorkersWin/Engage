@@ -6,7 +6,7 @@
 </thead>
 <tbody>
 <% @assessments.each do |level| %>
-  <tr><td><%= AssessmentLevel.find(level[0]).level %></td><td><%= level[1] %></td></tr>
+  <tr><td><%= level %></td></tr>
 <% end %>
 </tbody>
 <tfoot>

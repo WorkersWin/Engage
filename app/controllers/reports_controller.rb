@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
-  def assessments_by_level
-   @assessments = Assessment.group(:assessment_level_id).count
-   @total = Assessment.count
+  def current_assessments
+   @assessments = Assessment.current_assessments;
+   @total = @assessments.sum(&:last)
   end
 end
