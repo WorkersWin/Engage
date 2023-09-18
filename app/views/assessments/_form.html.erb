@@ -33,6 +33,7 @@
 
   <div>
    <%= fields_for :note, @assessment.note do |note_form| %>
+     <%= note_form.label :note, style: "display: block" %>
      <%= note_form.text_area :body %>
    <% end %>
   </div>
