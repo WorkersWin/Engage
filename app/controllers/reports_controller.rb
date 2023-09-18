@@ -8,12 +8,6 @@ class ReportsController < ApplicationController
 
   def assessment_levels_to_date
    target_date = report_params
-   puts "reports controller"
-   puts "report params = "
-   puts report_params
-   puts "target date = "
-   puts @target_date
-   puts " END"
    @assessments = Assessment.assessment_levels_to_date(params[:target_date]);
    @total = @assessments.sum(&:last)
   end

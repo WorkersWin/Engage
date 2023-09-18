@@ -3,7 +3,7 @@
 
 
 <%= form_with url:"/reports/assessment_levels_to_date", method: :get do |form| %>
-Target Date: <%= form.date_field :target_date %>
+Target Date: <%= form.date_field :target_date, required: true %>
 <%= form.submit 'Search' %>
 <% end %>
 
