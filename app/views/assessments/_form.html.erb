@@ -1,4 +1,4 @@
-<%= form_with(model: assessment) do |form| %>
+<%= form_with(model: assessment) do |assessment_form| %>
   <% if assessment.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(assessment.errors.count, "error") %> prohibited this assessment from being saved:</h2>
@@ -12,26 +12,32 @@
   <% end %>
 
   <div>
-    <%= form.label :assessed_on, style: "display: block" %>
-    <%= form.date_field :assessed_on %>
+    <%= assessment_form.label :assessed_on, style: "display: block" %>
+    <%= assessment_form.date_field :assessed_on %>
   </div>
 
   <div>
-    <%= form.label :assessment_level_id, style: "display: block" %>
+    <%= assessment_form.label :assessment_level_id, style: "display: block" %>
     <%= collection_select(:assessment, :assessment_level_id, AssessmentLevel.all.order(:level), :id, :level, include_blank: true) %>
   </div>
 
   <div>
-    <%= form.label :assessee_id, style: "display: block" %>
+    <%= assessment_form.label :assessee_id, style: "display: block" %>
     <%= collection_select(:assessment, :assessee_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
 
   <div>
-    <%= form.label :assessor_id, style: "display: block" %>
+    <%= assessment_form.label :assessor_id, style: "display: block" %>
     <%= collection_select(:assessment, :assessor_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
 
   <div>
-    <%= form.submit %>
+   <%= fields_for :note, @assessment.note do |note_form| %>
+     <%= note_form.text_area :body %>
+   <% end %>
+  </div>
+
+  <div>
+    <%= assessment_form.submit %>
   </div>
 <% end %>
