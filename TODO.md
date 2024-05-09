@@ -10,7 +10,13 @@ Adding items as they come up
 
 ## Campaigns
 
+* Title:string, Description:text, kickoff_date, launch_date, completion_date, outcome:text, successful:boolean, active:boolean
+
 ## Committees
+
+* Name:string, Description:text, formed_date:date, disbanded_date:date
+* CommitteeMembers: contacts:references, committees:references, joined_date:date, active:boolean
+** We can enhance it if necessary to track people joining and leaving and rejoining.
 
 ## Communications
 
@@ -22,6 +28,9 @@ Adding items as they come up
 
 ## Contacts
 
+* phone contact opt-in boolean and date
+* email contact opt-in boolean and date
+* text message contact opt-in boolean and date
 * Name autocomplete
 * Cleaner way to add assessment
 
