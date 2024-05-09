@@ -2,6 +2,15 @@
 
 Adding items as they come up
 
+
+## Need to organize these items
+
+* Visualization of org is very very helpful.
+* Org changes frequently and the structure of the org can change overnight. We need a mode where we can confirm things are the same and change things that are different.
+* Management / reporting structures are independent of "units" or teams.
+* Charts / breakdowns of support by teams are great.
+
+
 ## Asssessments
 
 * Created_by: user_id (to track who entered the record)
@@ -31,8 +40,11 @@ Adding items as they come up
 * phone contact opt-in boolean and date
 * email contact opt-in boolean and date
 * text message contact opt-in boolean and date
+* See above: Contact methods per employee need to be tracked (phone # most importantly if we need to do a phone tree)
 * Name autocomplete
 * Cleaner way to add assessment
+* Ability to assign a specific member as the main contact for potential recruits
+* Contact-specific notes
 
 ## Events
 
