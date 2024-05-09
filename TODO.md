@@ -37,6 +37,7 @@ Adding items as they come up
 
 ## Contacts
 
+* reports_to: manager:references (contacts)
 * phone contact opt-in boolean and date
 * email contact opt-in boolean and date
 * text message contact opt-in boolean and date
