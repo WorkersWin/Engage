@@ -1,7 +1,7 @@
 <% if contact.first_name %><p>FirstName: <%= link_to contact.first_name, contact %></p><% end %>
 <% if contact.last_name %><p>LastName: <%= link_to contact.last_name, contact %></p><% end %>
 <% if contact.pronouns %><p>Pronouns: <%= link_to contact.pronouns, contact %></p><% end %>
-<% if contact.mobile_phone %><p><%= link_to contact.mobile_phone, contact %></p><% end %>
-<% if contact.personal_email %><p><%= link_to contact.personal_email, contact %></p><% end %>
-<% if contact.work_username %><p><%= link_to contact.work_username, contact %></p><% end %>
-<% if contact.work_email %><p><%= link_to contact.work_email, contact %></p><% end %>
+<% if contact.mobile_phone %><p>Cell Phone: <%= link_to contact.mobile_phone, contact %></p><% end %>
+<% if contact.personal_email %><p>Personal Email: <%= link_to contact.personal_email, contact %></p><% end %>
+<% if contact.work_username %><p>Work Username: <%= link_to contact.work_username, contact %></p><% end %>
+<% if contact.work_email %><p>Work Email: <%= link_to contact.work_email, contact %></p><% end %>
