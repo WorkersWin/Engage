@@ -1,0 +1,9 @@
+<p class="lead">Welcome back!</p>
+
+There are:
+
+<ul>
+  <li><%= link_to pluralize(Contact.count, "contact"), contacts_path %></li>
+  <li><%= link_to pluralize(Assessment.count, "assessment"), assessments_path %></li>
+  <li><%= link_to pluralize(Note.count, "note"), notes_path %></li>
+</ul>
