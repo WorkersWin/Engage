@@ -1,12 +1,16 @@
 class Assessment < ApplicationRecord
   belongs_to :assessment_level
+
   belongs_to :assessor, class_name: 'Contact'
   belongs_to :assessee, class_name: 'Contact'
+
   has_one :note
 
   validates :assessed_on, presence: true
   validates :assessee, comparison: { other_than: :assessor, message: "and Assessor cannot be the same person" }
 
+  scope :most_recent, -> { order(assessed_on: :desc) }
+  scope :current, -> { most_recent.limit(1) }
 
 
   def self.current_assessments
@@ -31,7 +35,7 @@ class Assessment < ApplicationRecord
   end
 
   def self.assessment_levels_to_date(target_date)
-    puts "TARGET DATE = " 
+    puts "TARGET DATE = "
     puts target_date
     puts " END"
     sql_command = <<-SQL
@@ -49,7 +53,7 @@ class Assessment < ApplicationRecord
       ) t
       group by t.assessment_level_id
     SQL
-  
+
   connection.execute(
     sanitize_sql([sql_command, target_date])
   )

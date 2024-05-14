@@ -5,6 +5,7 @@
 <% unless contact.personal_email.blank? %><p><b>Personal Email:</b> <%= contact.personal_email %></p><% end %>
 <% unless contact.work_username.blank? %><p><b>Work Username:</b> <%= contact.work_username %></p><% end %>
 <% unless contact.work_email.blank? %><p><b>Work Email:</b> <%= contact.work_email %></p><% end %>
-<% unless contact.received_assessments.blank?  %>
-  <p><b>Assessment:</b> <%= contact.received_assessments.order('assessed_on desc').first.assessment_level.level %> (as of <%= @contact.received_assessments.order('assessed_on desc').first.assessed_on %> by <%= @contact.received_assessments.order('assessed_on desc').first.assessor.first_name %>)</p>
+
+<% if assessment = contact.current_assessment %>
+  <p><b>Assessment:</b> <%= assessment.assessment_level.level %> (as of <%= assessment.assessed_on %> by <%= assessment.assessor.first_name %>)</p>
 <% end%>

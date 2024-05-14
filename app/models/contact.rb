@@ -8,6 +8,10 @@ class Contact < ApplicationRecord
   has_many :given_assessments, class_name: 'Assessment', foreign_key: 'assessor_id'
   has_many :received_assessments, class_name: 'Assessment', foreign_key: 'assessee_id'
 
+  def current_assessment
+    received_assessments.current.first
+  end
+
   def display_name
     "#{first_name} #{last_name}"
   end
