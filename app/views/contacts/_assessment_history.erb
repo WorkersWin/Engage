@@ -1,0 +1,14 @@
+<% if contact.assessee_assessments.length > 0 %>
+  <h2>Assessment History</h2>
+  <table class="table">
+    <tr><th>Assessed On</th><th>Assessment</th><th>Assessor</th></tr>
+
+    <% contact.assessee_assessments.order(assessed_on: :desc).each do |t| %>
+      <tr>
+        <td><%= t.assessed_on %></td>
+        <td><%= t.assessment_level.level %></td>
+        <td><%= link_to t.assessor.first_name, t.assessor %> <%= link_to t.assessor.last_name, t.assessor %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

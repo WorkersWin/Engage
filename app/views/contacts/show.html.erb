@@ -2,21 +2,7 @@
 
 <%= render @contact %>
 
-    <% if @contact.assessee_assessments.length > 0 %>
-      <p>Assessment: <%= @contact.assessee_assessments.order('assessed_on desc').first.assessment_level.level %> (as of <%= @contact.assessee_assessments.order('assessed_on desc').first.assessed_on %> by <%= @contact.assessee_assessments.order('assessed_on desc').first.assessor.first_name %>)</p>
-
-<p>Assessment History</p>
-  <table class="table">
-    <tr><th>Assessed On</th><th>Assessment</th><th>Assessor</th></tr>
-      <% @contact.assessee_assessments.order(assessed_on: :desc).each do |t| %>
-    <tr>
-<td><%= t.assessed_on %></td>
-<td><%= t.assessment_level.level %></td>
-<td><%= link_to t.assessor.first_name, t.assessor %> <%= link_to t.assessor.last_name, t.assessor %></td>
-    <% end %>
-    <% end %>
-  </tr>
-  </table>
+<%= render "assessment_history", contact: @contact %>
 
 <div>
   <%= link_to "Edit this contact", edit_contact_path(@contact) %> |

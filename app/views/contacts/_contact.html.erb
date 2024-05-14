@@ -1,7 +1,10 @@
-<% if contact.first_name %><p>FirstName: <%= link_to contact.first_name, contact %></p><% end %>
-<% if contact.last_name %><p>LastName: <%= link_to contact.last_name, contact %></p><% end %>
-<% if contact.pronouns %><p>Pronouns: <%= link_to contact.pronouns, contact %></p><% end %>
-<% if contact.mobile_phone %><p>Cell Phone: <%= link_to contact.mobile_phone, contact %></p><% end %>
-<% if contact.personal_email %><p>Personal Email: <%= link_to contact.personal_email, contact %></p><% end %>
-<% if contact.work_username %><p>Work Username: <%= link_to contact.work_username, contact %></p><% end %>
-<% if contact.work_email %><p>Work Email: <%= link_to contact.work_email, contact %></p><% end %>
+<p><b>First Name:</b> <%= contact.first_name %></p>
+<p><b>Last Name:</b> <%= contact.last_name %></p>
+<% unless contact.pronouns.blank? %><p><b>Pronouns:</b> <%= contact.pronouns %></p><% end %>
+<% unless contact.mobile_phone.blank? %><p><b>Cell Phone:</b> <%= contact.mobile_phone %></p><% end %>
+<% unless contact.personal_email.blank? %><p><b>Personal Email:</b> <%= contact.personal_email %></p><% end %>
+<% unless contact.work_username.blank? %><p><b>Work Username:</b> <%= contact.work_username %></p><% end %>
+<% unless contact.work_email.blank? %><p><b>Work Email:</b> <%= contact.work_email %></p><% end %>
+<% unless contact.assessee_assessments.blank?  %>
+  <p><b>Assessment:</b> <%= contact.assessee_assessments.order('assessed_on desc').first.assessment_level.level %> (as of <%= @contact.assessee_assessments.order('assessed_on desc').first.assessed_on %> by <%= @contact.assessee_assessments.order('assessed_on desc').first.assessor.first_name %>)</p>
+<% end%>
