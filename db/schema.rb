@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_18_193859) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_30_215747) do
   create_table "assessment_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "level"
     t.text "description"
@@ -50,6 +50,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_193859) do
     t.string "personal_email"
     t.string "work_username"
     t.string "work_email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "countries", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "alpha2"
+    t.string "alpha3"
+    t.string "numeric"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

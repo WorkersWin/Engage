@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :countries
   resources :notes
   get 'reports/current_assessment_levels'
   get 'reports/assessment_levels_to_date'
