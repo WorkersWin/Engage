@@ -6,19 +6,18 @@
     <%= link_to event.event_type.name, event %>
   </td>
 
-  <td><% if event.start_datetime %>
+  <td><% unless event.start_datetime.blank? %>
     <%= link_to event.start_datetime, event %>
     <% end %>
   </td>
 
-  <td>
-  <td><% if event.end_datetime %>
+  <td><% unless event.end_datetime.blank? %>
     <%= link_to event.end_datetime, event %>
     <% end %>
   </td>
 
   <td>
-    <% if event.description %>
+    <% unless event.description.blank? %>
     <%= link_to event.description, event %>
     <% end %>
   </td>
