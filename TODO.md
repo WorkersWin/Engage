@@ -2,18 +2,8 @@
 
 Adding items as they come up
 
-
-## Need to organize these items
-
-* Visualization of org is very very helpful.
-* Org changes frequently and the structure of the org can change overnight. We need a mode where we can confirm things are the same and change things that are different.
-* Management / reporting structures are independent of "units" or teams.
-* Charts / breakdowns of support by teams are great.
-
-
 ## Asssessments
 
-* Created_by: user_id (to track who entered the record)
 * Real-time totals for the last 6 months displayed
 * Way to list all contacts in specific level
 
@@ -46,6 +36,11 @@ Adding items as they come up
 * Cleaner way to add assessment
 * Ability to assign a specific member as the main contact for potential recruits
 * Contact-specific notes
+* Charts / breakdowns of support by teams are great.
+* Management / reporting structures are independent of "units" or teams.
+* Created_by: user_id (to track who entered the record)
+* Visualization of org is very very helpful.
+* Org changes frequently and the structure of the org can change overnight. We need a mode where we can confirm things are the same and change things that are different.
 
 ## Events
 
