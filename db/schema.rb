@@ -34,11 +34,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
 
   create_table "cities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
-    t.bigint "country_id", null: false
-    t.bigint "state_id", null: false
+    t.bigint "country_id"
+    t.bigint "state_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["country_id"], name: "index_cities_on_country_id"
+    t.index ["state_id", "id"], name: "index_cities_on_state_id_and_id", unique: true
     t.index ["state_id"], name: "index_cities_on_state_id"
   end
 
@@ -121,8 +122,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
   create_table "states", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "usps"
+    t.bigint "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["country_id", "id"], name: "index_states_on_country_id_and_id", unique: true
+    t.index ["country_id"], name: "index_states_on_country_id"
   end
 
   create_table "trainings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -152,4 +156,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
   add_foreign_key "contact_took_trainings", "contacts"
   add_foreign_key "contact_took_trainings", "trainings"
   add_foreign_key "events", "event_types"
+  add_foreign_key "states", "countries"
 end

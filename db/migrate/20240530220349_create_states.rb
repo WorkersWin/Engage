@@ -7,5 +7,7 @@ class CreateStates < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+    add_index :states, [:country_id, :id], unique: true
+
   end
 end
