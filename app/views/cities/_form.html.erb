@@ -17,13 +17,8 @@
   </div>
 
   <div>
-    <%= form.label :country_id, style: "display: block" %>
-    <%= form.text_field :country_id %>
-  </div>
-
-  <div>
     <%= form.label :state_id, style: "display: block" %>
-    <%= form.text_field :state_id %>
+    <%= collection_select(:city, :state_id, State.all.order(:name), :id, :name) %>
   </div>
 
   <div>

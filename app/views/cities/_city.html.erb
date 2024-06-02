@@ -1,17 +1,9 @@
 <div id="<%= dom_id city %>">
-  <p>
-    <strong>Name:</strong>
-    <%= city.name %>
-  </p>
 
   <p>
-    <strong>Country:</strong>
-    <%= city.country_id %>
-  </p>
-
-  <p>
-    <strong>State:</strong>
-    <%= city.state_id %>
+    <%= link_to city.name, city %>, 
+    <% unless city.state_id.blank? %> <%= link_to city.state.name, city.state %>, <% end %>
+    <% unless city.country_id.blank? %> <%= city.country.name %>, <% end %>
   </p>
 
 </div>

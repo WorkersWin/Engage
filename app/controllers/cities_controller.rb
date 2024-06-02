@@ -3,7 +3,7 @@ class CitiesController < ApplicationController
 
   # GET /cities or /cities.json
   def index
-    @cities = City.all
+    @cities = City.all.order(:name)
   end
 
   # GET /cities/1 or /cities/1.json
