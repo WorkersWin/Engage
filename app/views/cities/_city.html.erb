@@ -3,7 +3,6 @@
   <p>
     <%= link_to city.name, city %>, 
     <% unless city.state_id.blank? %> <%= link_to city.state.name, city.state %>, <% end %>
-    <% unless city.country_id.blank? %> <%= city.country.name %>, <% end %>
   </p>
 
 </div>

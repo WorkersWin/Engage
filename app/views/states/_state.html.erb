@@ -1,17 +1,7 @@
 <div id="<%= dom_id state %>">
   <p>
-    <strong>Name:</strong>
-    <%= state.name %>
+    <%= link_to state.name, state %>,
+    <%= state.usps %>,
+    <%= link_to state.country.name, state.country %>
   </p>
-  
-  <p>
-    <strong>Country:</strong>
-    <%= state.country.name %>
-  </p>
-
-  <p>
-    <strong>Usps:</strong>
-    <%= state.usps %>
-  </p>
-
 </div>
