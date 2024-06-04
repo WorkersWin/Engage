@@ -1,0 +1,27 @@
+<div id="<%= dom_id location %>">
+  <p>
+    <strong>Name:</strong>
+    <%= location.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= location.description %>
+  </p>
+
+  <p>
+    <strong>City:</strong>
+    <% unless location.city_id.blank? %><%= location.city.name %><% end %>
+  </p>
+
+  <p>
+    <strong>State:</strong>
+    <% unless location.state_id.blank? %><%= location.state.name %><% end %>
+  </p>
+
+  <p>
+    <strong>Country:</strong>
+    <% unless location.country_id.blank? %><%= location.country.name %><% end %>
+  </p>
+
+</div>

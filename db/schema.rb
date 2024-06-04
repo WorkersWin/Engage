@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_04_021908) do
   create_table "assessment_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "level"
     t.text "description"
@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
     t.bigint "state_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["state_id", "id"], name: "index_cities_on_state_id_and_id", unique: true
+    t.index ["name", "state_id"], name: "index_cities_on_name_and_state_id", unique: true
     t.index ["state_id"], name: "index_cities_on_state_id"
   end
 
@@ -104,6 +104,19 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.bigint "city_id", null: false
+    t.bigint "state_id", null: false
+    t.bigint "country_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_locations_on_city_id"
+    t.index ["country_id"], name: "index_locations_on_country_id"
+    t.index ["state_id"], name: "index_locations_on_state_id"
+  end
+
   create_table "notes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "body"
     t.datetime "created_at", null: false
@@ -123,8 +136,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
     t.bigint "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["country_id", "id"], name: "index_states_on_country_id_and_id", unique: true
     t.index ["country_id"], name: "index_states_on_country_id"
+    t.index ["name", "country_id"], name: "index_states_on_name_and_country_id", unique: true
   end
 
   create_table "trainings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -153,5 +166,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_30_220757) do
   add_foreign_key "contact_took_trainings", "contacts"
   add_foreign_key "contact_took_trainings", "trainings"
   add_foreign_key "events", "event_types"
+  add_foreign_key "locations", "cities"
+  add_foreign_key "locations", "countries"
+  add_foreign_key "locations", "states"
   add_foreign_key "states", "countries"
 end
