@@ -1,17 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  code: MyString
   name: MyString
   description: MyText
-  city: one
-  state: one
-  country: one
 
 two:
-  code: MyString
   name: MyString
   description: MyText
-  city: two
-  state: two
-  country: two

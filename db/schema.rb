@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_04_021908) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_04_041054) do
   create_table "assessment_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "level"
     t.text "description"
@@ -105,6 +105,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_04_021908) do
   end
 
   create_table "locations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "code"
     t.string "name"
     t.text "description"
     t.bigint "city_id", null: false

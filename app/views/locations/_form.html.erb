@@ -12,6 +12,11 @@
   <% end %>
 
   <div>
+    <%= form.label :code, style: "display: block" %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
@@ -23,17 +28,17 @@
 
   <div>
     <%= form.label :city_id, style: "display: block" %>
-    <%= collection_select(:location, :city_id, City.all.order(:name), :id, :name) %>
+    <%= form.text_field :city_id %>
   </div>
 
   <div>
     <%= form.label :state_id, style: "display: block" %>
-    <%= collection_select(:location, :state_id, State.all.order(:name), :id, :name) %>
+    <%= form.text_field :state_id %>
   </div>
 
   <div>
     <%= form.label :country_id, style: "display: block" %>
-    <%= collection_select(:location, :country_id, Country.all.order(:name), :id, :name) %>
+    <%= form.text_field :country_id %>
   </div>
 
   <div>

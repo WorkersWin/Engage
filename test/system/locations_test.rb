@@ -15,6 +15,7 @@ class LocationsTest < ApplicationSystemTestCase
     click_on "New location"
 
     fill_in "City", with: @location.city_id
+    fill_in "Code", with: @location.code
     fill_in "Country", with: @location.country_id
     fill_in "Description", with: @location.description
     fill_in "Name", with: @location.name
@@ -30,6 +31,7 @@ class LocationsTest < ApplicationSystemTestCase
     click_on "Edit this location", match: :first
 
     fill_in "City", with: @location.city_id
+    fill_in "Code", with: @location.code
     fill_in "Country", with: @location.country_id
     fill_in "Description", with: @location.description
     fill_in "Name", with: @location.name
