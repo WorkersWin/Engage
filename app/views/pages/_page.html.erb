@@ -1,0 +1,6 @@
+<div id="<%= dom_id page %>" class="page">
+  <p><span class="page-title"><%= link_to sanitize(page.title), page_path(page) %></span></p>
+  <p class="page-link"><%= simple_format(page.link) %></p>
+  <p class="page-body "><%= simple_format(page.body) %></p>
+  <% if Current.user %><%= link_to "Edit this page", edit_page_path(page) %><% end %>
+</div>

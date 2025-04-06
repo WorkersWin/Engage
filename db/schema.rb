@@ -10,48 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_04_041054) do
-  create_table "assessment_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+ActiveRecord::Schema[8.0].define(version: 2025_04_05_014153) do
+  create_table "assessment_levels", force: :cascade do |t|
     t.string "level"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "assessments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "assessments", force: :cascade do |t|
     t.date "assessed_on"
-    t.bigint "assessment_level_id", null: false
-    t.bigint "assessor_id", null: false
-    t.bigint "assessee_id", null: false
+    t.integer "assessment_level_id", null: false
+    t.integer "assessor_id", null: false
+    t.integer "assessee_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "note_id"
+    t.integer "note_id"
     t.index ["assessee_id"], name: "index_assessments_on_assessee_id"
     t.index ["assessment_level_id"], name: "index_assessments_on_assessment_level_id"
     t.index ["assessor_id"], name: "index_assessments_on_assessor_id"
     t.index ["note_id"], name: "index_assessments_on_note_id"
   end
 
-  create_table "cities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.bigint "state_id"
+    t.integer "state_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name", "state_id"], name: "index_cities_on_name_and_state_id", unique: true
     t.index ["state_id"], name: "index_cities_on_state_id"
   end
 
-  create_table "contact_took_trainings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "contact_notes", force: :cascade do |t|
+    t.integer "contacts_id", null: false
+    t.integer "notes_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contacts_id"], name: "index_contact_notes_on_contacts_id"
+    t.index ["notes_id"], name: "index_contact_notes_on_notes_id"
+  end
+
+  create_table "contact_took_trainings", force: :cascade do |t|
     t.date "trained_on"
-    t.bigint "contact_id", null: false
-    t.bigint "training_id", null: false
+    t.integer "contact_id", null: false
+    t.integer "training_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contact_id"], name: "index_contact_took_trainings_on_contact_id"
     t.index ["training_id"], name: "index_contact_took_trainings_on_training_id"
   end
 
-  create_table "contacts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "pronouns"
@@ -63,7 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_04_041054) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "countries", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "countries", force: :cascade do |t|
     t.string "name"
     t.string "alpha2"
     t.string "alpha3"
@@ -72,45 +81,45 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_04_041054) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "event_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "event_types", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "events", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "events", force: :cascade do |t|
     t.string "name"
     t.datetime "start_datetime"
     t.datetime "end_datetime"
     t.text "description"
-    t.bigint "event_type_id", null: false
+    t.integer "event_type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_type_id"], name: "index_events_on_event_type_id"
   end
 
-  create_table "job_levels", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "job_levels", force: :cascade do |t|
     t.string "level"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "job_titles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "job_titles", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "locations", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string "code"
     t.string "name"
     t.text "description"
-    t.bigint "city_id", null: false
-    t.bigint "state_id", null: false
-    t.bigint "country_id", null: false
+    t.integer "city_id", null: false
+    t.integer "state_id", null: false
+    t.integer "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_locations_on_city_id"
@@ -118,57 +127,76 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_04_041054) do
     t.index ["state_id"], name: "index_locations_on_state_id"
   end
 
-  create_table "notes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "notes", force: :cascade do |t|
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "social_media_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "organizations", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "states", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "sessions", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "ip_address"
+    t.string "user_agent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sessions_on_user_id"
+  end
+
+  create_table "social_media_types", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
     t.string "name"
     t.string "usps"
-    t.bigint "country_id"
+    t.integer "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["country_id"], name: "index_states_on_country_id"
     t.index ["name", "country_id"], name: "index_states_on_name_and_country_id", unique: true
   end
 
-  create_table "trainings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "trainings", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
+  create_table "users", force: :cascade do |t|
+    t.string "username", null: false
+    t.string "email_address", null: false
+    t.string "password_digest", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "mobile_phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
   add_foreign_key "assessments", "assessment_levels"
   add_foreign_key "assessments", "contacts", column: "assessee_id"
   add_foreign_key "assessments", "contacts", column: "assessor_id"
   add_foreign_key "cities", "states"
+  add_foreign_key "contact_notes", "contacts", column: "contacts_id"
+  add_foreign_key "contact_notes", "notes", column: "notes_id"
   add_foreign_key "contact_took_trainings", "contacts"
   add_foreign_key "contact_took_trainings", "trainings"
   add_foreign_key "events", "event_types"
   add_foreign_key "locations", "cities"
   add_foreign_key "locations", "countries"
   add_foreign_key "locations", "states"
+  add_foreign_key "sessions", "users"
   add_foreign_key "states", "countries"
 end

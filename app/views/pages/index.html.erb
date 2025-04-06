@@ -1,0 +1,16 @@
+<h1>Pages</h1>
+
+<% content_for :title, "Pages" %>
+<p style="color: green"><%= notice %></p>
+
+<div id="pages">
+  <% @pages.each do |page| %>
+    <div id="<%= dom_id page %>" class="page">
+      <div>
+        <span class="page-title"><%= link_to page.title, doc_path(page.link) %></span>
+      </div>
+      <div class="page-body "><%= truncate(strip_tags(page.body), length: 250) %></div>
+
+    </div>
+  <% end %>
+</div>

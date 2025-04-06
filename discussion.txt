@@ -1,0 +1,175 @@
+
+
+Need: More centralized and available discussion and voting on both proposals and one-off events.
+
+Nothing has native Discord auth, we don't have our own curated membership list or auth mechanism...
+Need some kind of CMS soon?
+Platform for a one-off vote, but the utility of that feels limited and possibly complex.
+Rather invest time/money in something more durable.
+
+
+
+
+Issue: Syncing Community Membership System (CMS) users with the other applications
+Solution: Keycloak and discord as SSO providers
+
+Licensing: Per user, per member, flat rate
+
+
+yup this is the intake form for signing up for dues / theoretically joining our union (since we lifted it from AWU's join-and-sign-up-to-pay-dues page)
+
+
+
+
+
+Discord is our broadest membership platform, outside of text/email. We already take steering committee votes on discord, solidaritybot has a /motion command
+(we've also got keycloak and discord as SSO providers, as background)
+
+
+
+
+
+Current Process
+When someone wants to bring a motion for something or a proposed plan of some kind, a google doc is created and then stored somewhere in the Drive.
+That then gets posted in either discord or signal. I don't think either place has full membership or activity, with people preferring one or the other.
+It then maybe gets referenced by an agenda in an OC or SC meeting. People who attend are able to give input, but only if we have enough time to run through it in the meeting. Anyone who can't make it, didn't see the message, or lost track of it likely doesn't give input and isn't involved in the process.
+After some discussion and maybe some on-the-fly changes or promises to make changes, it might get a vote, which is then stored in an agenda which is unlikely to be seen or opened again.
+After vote, the document kind of becomes lost. Maybe a person or two remembers it exists, if they've been around long enough, but we lack any kind of effective historical record of things we've voted on and what's still active and what's been overruled by later votes or motions.
+
+ISSUES
+It creates a very synchronous and attendance-focused model of governance. Attendance is of course important, but I don't like that it parallels RTO and disadvantages people who can't make the regular meeting times, have oncall, etc.
+It creates a bias for contributors who are more tenured, simply from a historical context perspective.
+It leaves many blind to what is happening now and what has happened in the past.
+It puts a lot of burden on individuals to actively seek to be overtly involved. Wanting to be involved is good, but we should also seek to make participation easy.
+It depends heavily on a manually (un)curated document store. Searching for past information both requires knowing what was discussed and possibly when it was discussed.
+It has no easily reference historical/active record.
+All of the above de-incentivizes new participants.
+Authorization
+
+
+Sure, I see where you're coming from. Maybe a few missing pieces though... we do have a drive folder where we store all motions which have been passed. It's got full text search, and each motion doc has a link to the agenda in which it was discussed/voted on.
+
+
+"approved resolutions" folder? It looks like it only had two updates in 2024.
+
+
+
+
+
+
+Thoughts on the issues you brought up
+
+I really don't like the word "governance", ha ha. I disagree about the RTO parallel, we meet on zoom. Yes, this biases towards attendance, but that's intentional. The steering committee is a commitment. We've moved the time/cadence around to be as inclusive as possible, but if there are specific folks who'd like to be involved and can't, we can always move it again. SC members don't have to make every meeting (oncall or whatever), that's why we take notes and have quorum rules, etc.
+New SC members and tenured SC members each get one vote. Everyone has access to the same information.
+Agreed, and this is a longstanding problem. At times we've attempted to post summaries in ⁠announcements or ⁠events . Right now I think @Alex CW is experimenting with this. I'd love to keep experimenting with sustainable ways to keep membership up to date without compromising our opsec (e.g. like an email list would)
+Hmm, this feels like an onboarding problem? All our events are listed on discord with zoom links and descriptions of who's invited. We've got a wiki (admittedly kinda outdated) with a full list of opportunities for folks to get more involved. Maybe there's a repetition factor, or a particular vector we're missing?
+I think google drive search is pretty solid, but I've also been in orgs where each motion was tracked individually and separately. I'd support someone trying to set this up for more visibility
+Same as 5 I think?
+I can definitely see this -- would love to talk about options to get folks more involved
+
+
+
+
+
+
+
+As a newer member, this rings very true to me. It’s taken a lot of proactivity on my part to find resources. The first time that I logged into the wiki was yesterday
+I don’t think that it’s the intent by any means, but it has at times felt like I’ve had to “break in” and some of that might be the tech
+I have some further thoughts on loomio. Async is good for participation but really bad for context and iteration. When you move to async voting, you are also giving up a shared understanding on what's being voted on. I think this is a nuanced effect, it's easy to say "the doc doesn't change, that's what we're voting on," but IMO there is meaningful context added by hearing people debate in real time about the pros/cons of a motion before making your decision. Not all motions need this, but the important ones really do. That's why the discord voting mechanism we've got has an "object" option, meaning "I think we should discuss this live"
+Right I don't think any of it is malicious, it's more of a sprawl issue and an organizational one.
+
+
+
+Honestly the thing I liked about loomio most was free and self-hosted. I liked the premise of it. Not committed to it in particular. I just feel that for the reasons I listed, I don't think Google drive is either working for me (and maybe others) and I have real concerns about it's scalability, especially when we go public.
+Is your concern mostly about visibility? Or is it the mechanics of getting people involved on a vote?
+Both. Like one thing I really liked about loomio was that it brought up the concept of having a dashboard of things which are awaiting my attention because it's been sent to my OC/SC/whatever group. Like a to-do list that isn't put together moments before the meeting or a self-organizing agenda.
+It's brings process and visibility and accountability to it. Instead of just live attendance.
+Shooting a doc into Signal really isn't doing it for me personally.
+Nor is the prospect of reading 70 past resolutions and presumably far more draft or failed resolutions to understand what's been done before.
+I don't really participate in any OCs other than the SC. So I personally wouldn't be able to do that.
+I have to agree with XXXXX. I really had no idea how much was actually going on and I think promoting the awareness will reassure a lot of members that things are happening
+I also would welcome the representation that including more of the membership that’s on discord in votes would have
+(related to my later comments on airtable, but I'm not convinced Discord is a great source of truth for organizing/involvement)
+I agree with that too, but I’m not sure what the alternative is
+Could a CSM do that?
+Imo, a member management system.
+Do they make ones specifically for unions?
+There's lots of them specialized for unions even. 
+Nice
+What’s the license cost look like?
+I would be happy to pitch in
+Many don't publish them, but I suspect we'll need dues first.
+What if I just donated a license until we have dues?
+I would absolutely love to know if any support something like keycloak, Authentik, or have their own oauth provider for access to other tooling.
+Maybe CWA has more familiarity and could recommend
+If it's as simple as a singular license... Maybe?
+Oh fair point, could be seat based
+But there are others
+Let me throw my other long and badly organized message here
+
+#######
+Airtable... 
+
+mostly uncurated data dump. People come and go, it may or may not be updated.
+Occasionally someone feels a field or two isn't working for them so they do some updates and then it isn't touched again. 
+Has to be manually updated by a few people with access.
+Members can't update their own information. Either creates a lot of additional burden on core organizers or it becomes stale.
+Many fields aren't populated or are old, irrelevant, or just incorrect.
+There's a shocking number with no contact info at all.
+Notes about 1:1's aren't really that useful except the first time if it was assigned by a CWA person who pre-screened.
+It doesn't have any mechanism for promoting followups or similar.
+I don't see how it scales once we get to being public with open signups. Manual data entry from some source that's receiving it in another format?
+Doesn't actively link identities. It's quite useful for looking up discord usernames, for example, but that information may or may not be accurate and people don't always use real names here on discord. With git, wiki, or other future systems, identities become even more difficult to manage by hand.
+It's currently our only identity store. But it's not really that.
+I don't see how it helps us for much more than tallying members and supporters. That's kinda the only useful information I've seen pulled from it.
+What value is it providing us?
+Will we track dues payments with airtable?
+Will we rely on incomplete contact info we managed to collect from people for outreach/mobilization and paying dues?
+Does it provide us with a reliable mechanism for messaging and organizing?
+Combines members with leads/supporters, opposed parties, and even unassessed persons.
+The needs for these different groups, their data and access patterns for it is pretty varied.
+
+As the primary contact system. 
+
+Heavily biased towards people who like organizing in a 1:1 focused way.
+Creates an implicit responsibility for those people who you are a primary contact for. 
+--Who takes over this responsibility when a primary contact leaves? Attrition becomes a direct threat to our functionality.
+--Are people actually actively reaching out back to their contacts to keep in touch? 
+--How many members actually want this responsibility and how many of them are core organizers in the loop on messaging campaigns?
+--If someone's primary contact kept in touch with them in person, how do we do outreach if they leave or are inactive or unreachable?
+--How does this scale as we grow, especially if it's in large numbers? 
+--How do we conduct mass messaging campaigns, especially time sensitive ones? 
+--How do we ensure we're tracking contacts and highlighting when we need to re-engage people?
+
+Concerns about personal commitments / burnout, scalability, and reliability for our goals.
+
+
+#########
+
+
+
+I feel like we're prioritizing the "personal touch" and ignoring the looming reality of being public and needing to function in a reliable way.
+We may not like the word "governance", but that's what's required to be a legal entity and represent all of us effectively.
+1:1 organizing and the "personal touch" has been our core strategy, yeah.
+Yup, I know. And that's great when small and underground, but idk if it's working that well even now with a few hundred supposed members.
+
+
+
+
+Discord
+Our broadest membership platform, outside of text/email.
+We already take steering committee votes on discord, solidaritybot has a /motion command
+
+Applications We Already Use
+Discord
+Google Docs
+Google Drive
+Keycloak
+Wiki.js
+
+Applications To Review
+AppFlowy
+Loomio
+Union Impact
+UnionTrack
+Union Worx
