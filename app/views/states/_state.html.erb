@@ -4,4 +4,11 @@
     <%= state.usps %>,
     <%= link_to state.country.name, state.country %>
   </p>
+  <div>
+    <ul>
+    <% state.cities.order(:name).each do |city| %>
+      <li><%= link_to city.name, city_path(city) %></li>
+    <% end %>
+    </ul>
+  </div>
 </div>

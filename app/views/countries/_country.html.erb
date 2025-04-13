@@ -19,4 +19,10 @@
     <%= country.numeric %>
   </p>
 
+  <p>States</p>
+<ul>
+  <% country.states.order(:name).each do |state| %>
+    <li><%= link_to state.name, state_path(state) %></li>
+  <% end %>
+</ul>
 </div>

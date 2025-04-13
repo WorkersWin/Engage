@@ -5,7 +5,13 @@
 
 <div id="states">
   <% @states.each do |state| %>
-    <%= render state %>
+    <div id="<%= dom_id state %>">
+      <p>
+        <%= link_to state.name, state %>,
+        <%= state.usps %>,
+        <%= link_to state.country.name, state.country %>
+      </p>
+    </div>
   <% end %>
 </div>
 
