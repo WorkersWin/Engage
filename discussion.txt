@@ -1,7 +1,3 @@
-
-Honestly the thing I liked about loomio most was free and self-hosted. I liked the premise of it. Not committed to it in particular. I just feel that for the reasons I listed, I don't think Google drive is either working for me (and maybe others) and I have real concerns about it's scalability, especially when we go public.
-Is your concern mostly about visibility? Or is it the mechanics of getting people involved on a vote?
-Both. Like one thing I really liked about loomio was that it brought up the concept of having a dashboard of things which are awaiting my attention because it's been sent to my OC/SC/whatever group. Like a to-do list that isn't put together moments before the meeting or a self-organizing agenda.
 It's brings process and visibility and accountability to it. Instead of just live attendance.
 Shooting a doc into Signal really isn't doing it for me personally.
 Nor is the prospect of reading 70 past resolutions and presumably far more draft or failed resolutions to understand what's been done before.
@@ -10,17 +6,8 @@ I have to agree with XXXXX. I really had no idea how much was actually going on 
 I also would welcome the representation that including more of the membership that’s on discord in votes would have
 (related to my later comments on airtable, but I'm not convinced Discord is a great source of truth for organizing/involvement)
 I agree with that too, but I’m not sure what the alternative is
-Could a CSM do that?
-Imo, a member management system.
-Do they make ones specifically for unions?
-There's lots of them specialized for unions even. 
-Nice
-What’s the license cost look like?
-I would be happy to pitch in
-Many don't publish them, but I suspect we'll need dues first.
-What if I just donated a license until we have dues?
-I would absolutely love to know if any support something like keycloak, Authentik, or have their own oauth provider for access to other tooling.
-Maybe CWA has more familiarity and could recommend
+
+Maybe has more familiarity and could recommend
 If it's as simple as a singular license... Maybe?
 Oh fair point, could be seat based
 But there are others
