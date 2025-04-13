@@ -65,6 +65,6 @@ class SocialMediaTypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def social_media_type_params
-      params.require(:social_media_type).permit(:name, :description)
+      params.require(:social_media_type).permit(:homepage, :name, :description)
     end
 end

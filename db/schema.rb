@@ -151,6 +151,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_05_014153) do
 
   create_table "social_media_types", force: :cascade do |t|
     t.string "name"
+    t.string "homepage"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

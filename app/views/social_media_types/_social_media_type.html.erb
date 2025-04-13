@@ -1,12 +1,15 @@
 <div id="<%= dom_id social_media_type %>">
+<%= link_to "Edit", edit_social_media_type_path(social_media_type) %>
   <p>
     <strong>Name:</strong>
     <%= social_media_type.name %>
   </p>
-
+  <p>
+    <strong>Homepage:</strong>
+    <%= social_media_type.homepage %>
+  </p>
   <p>
     <strong>Description:</strong>
     <%= social_media_type.description %>
   </p>
-
 </div>
