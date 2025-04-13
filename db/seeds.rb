@@ -7,29 +7,37 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+puts "Start Seeding ..."
+
+
+
 ##################################################
 # REMOVE THE DEFAULT USER FROM PRODUCTION SYSTEMS!
 ##################################################
 User.create(username: "one", email_address: "one@one.com", password: "one", password_confirmation: "one")
 
+puts "Start User Seeding ..."
 # some default users for testing
 1000.times do |i|
   Contact.create!(work_username: "work_username-#{i}", first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", mobile_phone: "cellphone_#{i}")
 end
 
 # General seeds
+puts "Start Assessment Level Seeding ..."
 AssessmentLevel.create!(level: "1")
 AssessmentLevel.create!(level: "2")
 AssessmentLevel.create!(level: "3")
 AssessmentLevel.create!(level: "HR")
 AssessmentLevel.create!(level: "MGR")
 
+puts "Start Event Type Seeding ..."
 EventType.create(name: "OC Meeting")
 EventType.create(name: "Protest - Solidarity")
 EventType.create(name: "Protest - Our Union")
 EventType.create(name: "Protest - Walkout")
 EventType.create(name: "Union Day")
 
+puts "Start Job Level Seeding ..."
 JobLevel.create(level: "1")
 JobLevel.create(level: "2")
 JobLevel.create(level: "3")
@@ -43,6 +51,7 @@ JobLevel.create(level: "11")
 JobLevel.create(level: "12")
 JobLevel.create(level: "99")
 
+puts "Start Job Title Seeding ..."
 JobTitle.create(title: "HRBP")
 JobTitle.create(title: "ICQA Programmer")
 JobTitle.create(title: "Project Manager")
@@ -51,6 +60,7 @@ JobTitle.create(title: "SDE")
 JobTitle.create(title: "SDE II")
 JobTitle.create(title: "Sr. SDE")
 
+puts "Start Social Media Type Seeding ..."
 SocialMediaType.create!(name: "dA")
 SocialMediaType.create!(name: "Discord")
 SocialMediaType.create!(name: "Facebook")
@@ -58,6 +68,7 @@ SocialMediaType.create!(name: "Mastodon")
 SocialMediaType.create!(name: "Reddit")
 SocialMediaType.create!(name: "Twitter")
 
+puts "Start Training Seeding ..."
 Training.create(name: 'First Training')
 Training.create(name: 'Second Training')
 Training.create(name: 'Third Training')
@@ -65,6 +76,7 @@ Training.create(name: 'Fourth Training')
 Training.create(name: 'Fifth Training')
 
 
+puts "Start Country Seeding ..."
 Country.create(name: 'United States of America', alpha2: 'US', alpha3: 'USA', numeric: '840')
 Country.create(name: 'Canada', alpha2: 'CA', alpha3: 'CAN', numeric: '124')
 
@@ -315,6 +327,7 @@ Country.create(name: 'Canada', alpha2: 'CA', alpha3: 'CAN', numeric: '124')
 # Country.create(name: 'Zambia|ZM')
 # Country.create(name: 'Zimbabwe|ZW')
 
+puts "Start USA State Seeding ..."
 usa = Country.find_by(alpha3: 'USA')
 State.create(name: "Alabama", usps: "AL", country_id: usa.id)
 State.create(name: "Alaska", usps: "AK", country_id: usa.id)
@@ -369,6 +382,7 @@ State.create(name: "West Virginia", usps: "WV", country_id: usa.id)
 State.create(name: "Wisconsin", usps: "WI", country_id: usa.id)
 State.create(name: "Wyoming", usps: "WY", country_id: usa.id)
 
+puts "Start Alabama Seeding ..."
 state = State.find_by(usps: 'AL')
 City.create(name: "Alexander City", state_id: state.id)
 City.create(name: "Andalusia", state_id: state.id)
@@ -410,6 +424,7 @@ City.create(name: "Tuscaloosa", state_id: state.id)
 City.create(name: "Tuscumbia", state_id: state.id)
 City.create(name: "Tuskegee", state_id: state.id)
 
+puts "Start Alaska Seeding ..."
 state = State.find_by(usps: 'AK')
 City.create(name: "Anchorage", state_id: state.id)
 City.create(name: "Cordova", state_id: state.id)
@@ -426,6 +441,8 @@ City.create(name: "Seward", state_id: state.id)
 City.create(name: "Sitka", state_id: state.id)
 City.create(name: "Skagway", state_id: state.id)
 City.create(name: "Valdez", state_id: state.id)
+
+puts "Start Arizona Seeding ..."
 state = State.find_by(usps: 'AZ')
 City.create(name: "Ajo", state_id: state.id)
 City.create(name: "Avondale", state_id: state.id)
@@ -456,6 +473,7 @@ City.create(name: "Window Rock", state_id: state.id)
 City.create(name: "Winslow", state_id: state.id)
 City.create(name: "Yuma", state_id: state.id)
 
+puts "Start Arkansas Seeding ..."
 state = State.find_by(usps: 'AR')
 City.create(name: "Arkadelphia", state_id: state.id)
 City.create(name: "Arkansas Post", state_id: state.id)
@@ -488,6 +506,7 @@ City.create(name: "Stuttgart", state_id: state.id)
 City.create(name: "Van Buren", state_id: state.id)
 City.create(name: "West Memphis", state_id: state.id)
 
+puts "Start California Seeding ..."
 state = State.find_by(usps: 'CA')
 City.create(name: "Alameda", state_id: state.id)
 City.create(name: "Alhambra", state_id: state.id)
@@ -628,6 +647,7 @@ City.create(name: "Woodland", state_id: state.id)
 City.create(name: "Yorba Linda", state_id: state.id)
 City.create(name: "Yuba City", state_id: state.id)
 
+puts "Start Colorado Seeding ..."
 state = State.find_by(usps: 'CO')
 City.create(name: "Alamosa", state_id: state.id)
 City.create(name: "Aspen", state_id: state.id)
@@ -671,6 +691,7 @@ City.create(name: "Vail", state_id: state.id)
 City.create(name: "Walsenburg", state_id: state.id)
 City.create(name: "Westminster", state_id: state.id)
 
+puts "Start Connecticut Seeding ..."
 state = State.find_by(usps: 'CT')
 City.create(name: "Ansonia", state_id: state.id)
 City.create(name: "Berlin", state_id: state.id)
@@ -731,6 +752,7 @@ City.create(name: "Windsor", state_id: state.id)
 City.create(name: "Windsor Locks", state_id: state.id)
 City.create(name: "Winsted", state_id: state.id)
 
+puts "Start Deleware Seeding ..."
 state = State.find_by(usps: 'DE')
 City.create(name: "Dover", state_id: state.id)
 City.create(name: "Lewes", state_id: state.id)
@@ -740,6 +762,7 @@ City.create(name: "Newark", state_id: state.id)
 City.create(name: "Smyrna", state_id: state.id)
 City.create(name: "Wilmington", state_id: state.id)
 
+puts "Start Florida Seeding ..."
 state = State.find_by(usps: 'FL')
 City.create(name: "Apalachicola", state_id: state.id)
 City.create(name: "Bartow", state_id: state.id)
@@ -800,6 +823,7 @@ City.create(name: "White Springs", state_id: state.id)
 City.create(name: "Winter Haven", state_id: state.id)
 City.create(name: "Winter Park", state_id: state.id)
 
+puts "Start Hawaii Seeding ..."
 state = State.find_by(usps: 'HI')
 City.create(name: "Hanalei", state_id: state.id)
 City.create(name: "Hilo", state_id: state.id)
@@ -816,6 +840,7 @@ City.create(name: "Wailuku", state_id: state.id)
 City.create(name: "Waimea", state_id: state.id)
 City.create(name: "Idaho", state_id: state.id)
 
+puts "Start Idaho Seeding ..."
 state = State.find_by(usps: 'ID')
 City.create(name: "Hanalei", state_id: state.id)
 City.create(name: "Hilo", state_id: state.id)
@@ -832,6 +857,7 @@ City.create(name: "Wailuku", state_id: state.id)
 City.create(name: "Waimea", state_id: state.id)
 City.create(name: "Idaho", state_id: state.id)
 
+puts "Start Illinois Seeding ..."
 state = State.find_by(usps: 'IL')
 City.create(name: "Alton", state_id: state.id)
 City.create(name: "Arlington Heights", state_id: state.id)
@@ -929,6 +955,7 @@ City.create(name: "Winnetka", state_id: state.id)
 City.create(name: "Wood River", state_id: state.id)
 City.create(name: "Zion", state_id: state.id)
 
+puts "Start Indiana Seeding ..."
 state = State.find_by(usps: 'IN')
 City.create(name: "Alton", state_id: state.id)
 City.create(name: "Anderson", state_id: state.id)
@@ -977,6 +1004,7 @@ City.create(name: "Vincennes", state_id: state.id)
 City.create(name: "Wabash", state_id: state.id)
 City.create(name: "West Lafayette", state_id: state.id)
 
+puts "Start Iowa Seeding ..."
 state = State.find_by(usps: 'IA')
 City.create(name: "Amana Colonies", state_id: state.id)
 City.create(name: "Ames", state_id: state.id)
@@ -1009,6 +1037,7 @@ City.create(name: "Waterloo", state_id: state.id)
 City.create(name: "Webster City", state_id: state.id)
 City.create(name: "West Des Moines", state_id: state.id)
 
+puts "Start Kansas Seeding ..."
 state = State.find_by(usps: 'KS')
 City.create(name: "Abilene", state_id: state.id)
 City.create(name: "Arkansas City", state_id: state.id)
@@ -1044,6 +1073,7 @@ City.create(name: "Smith Center", state_id: state.id)
 City.create(name: "Topeka", state_id: state.id)
 City.create(name: "Wichita", state_id: state.id)
 
+puts "Start Kentucky Seeding ..."
 state = State.find_by(usps: 'KY')
 City.create(name: "Ashland", state_id: state.id)
 City.create(name: "Barbourville", state_id: state.id)
@@ -1073,6 +1103,7 @@ City.create(name: "Paducah", state_id: state.id)
 City.create(name: "Paris", state_id: state.id)
 City.create(name: "Richmond", state_id: state.id)
 
+puts "Start Louisiana Seeding ..."
 state = State.find_by(usps: 'LA')
 City.create(name: "Abbeville", state_id: state.id)
 City.create(name: "Alexandria", state_id: state.id)
@@ -1095,6 +1126,7 @@ City.create(name: "Saint Martinville", state_id: state.id)
 City.create(name: "Shreveport", state_id: state.id)
 City.create(name: "Thibodaux", state_id: state.id)
 
+puts "Start Maine Seeding ..."
 state = State.find_by(usps: 'ME')
 City.create(name: "Auburn", state_id: state.id)
 City.create(name: "Augusta", state_id: state.id)
@@ -1129,6 +1161,7 @@ City.create(name: "Scarborough", state_id: state.id)
 City.create(name: "Waterville", state_id: state.id)
 City.create(name: "York", state_id: state.id)
 
+puts "Start Maryland Seeding ..."
 state = State.find_by(usps: 'MD')
 City.create(name: "Aberdeen", state_id: state.id)
 City.create(name: "Annapolis", state_id: state.id)
@@ -1158,6 +1191,7 @@ City.create(name: "Takoma Park", state_id: state.id)
 City.create(name: "Towson", state_id: state.id)
 City.create(name: "Westminster", state_id: state.id)
 
+puts "Start Massachusetts Seeding ..."
 state = State.find_by(usps: 'MA')
 City.create(name: "Abington", state_id: state.id)
 City.create(name: "Adams", state_id: state.id)
@@ -1262,6 +1296,7 @@ City.create(name: "Woburn", state_id: state.id)
 City.create(name: "Woods Hole", state_id: state.id)
 City.create(name: "Worcester", state_id: state.id)
 
+puts "Start Michigan Seeding ..."
 state = State.find_by(usps: 'MI')
 City.create(name: "Adrian", state_id: state.id)
 City.create(name: "Alma", state_id: state.id)
@@ -1321,6 +1356,7 @@ City.create(name: "Warren", state_id: state.id)
 City.create(name: "Wyandotte", state_id: state.id)
 City.create(name: "Ypsilanti", state_id: state.id)
 
+puts "Start Minnesota Seeding ..."
 state = State.find_by(usps: 'MN')
 City.create(name: "Albert Lea", state_id: state.id)
 City.create(name: "Alexandria", state_id: state.id)
@@ -1356,6 +1392,7 @@ City.create(name: "Virginia", state_id: state.id)
 City.create(name: "Willmar", state_id: state.id)
 City.create(name: "Winona", state_id: state.id)
 
+puts "Start Mississippi Seeding ..."
 state = State.find_by(usps: 'MS')
 City.create(name: "Bay Saint Louis", state_id: state.id)
 City.create(name: "Biloxi", state_id: state.id)
@@ -1386,6 +1423,7 @@ City.create(name: "Vicksburg", state_id: state.id)
 City.create(name: "West Point", state_id: state.id)
 City.create(name: "Yazoo City", state_id: state.id)
 
+puts "Start Missouri Seeding ..."
 state = State.find_by(usps: 'MO')
 City.create(name: "Boonville", state_id: state.id)
 City.create(name: "Branson", state_id: state.id)
@@ -1423,6 +1461,7 @@ City.create(name: "Springfield", state_id: state.id)
 City.create(name: "Warrensburg", state_id: state.id)
 City.create(name: "West Plains", state_id: state.id)
 
+puts "Start Montana Seeding ..."
 state = State.find_by(usps: 'MT')
 City.create(name: "Anaconda", state_id: state.id)
 City.create(name: "Billings", state_id: state.id)
@@ -1441,6 +1480,7 @@ City.create(name: "Miles City", state_id: state.id)
 City.create(name: "Missoula", state_id: state.id)
 City.create(name: "Virginia City", state_id: state.id)
 
+puts "Start Nebraska Seeding ..."
 state = State.find_by(usps: 'NE')
 City.create(name: "Beatrice", state_id: state.id)
 City.create(name: "Bellevue", state_id: state.id)
@@ -1462,6 +1502,7 @@ City.create(name: "Plattsmouth", state_id: state.id)
 City.create(name: "Red Cloud", state_id: state.id)
 City.create(name: "Sidney", state_id: state.id)
 
+puts "Start Nevada Seeding ..."
 state = State.find_by(usps: 'NV')
 City.create(name: "Boulder City", state_id: state.id)
 City.create(name: "Carson City", state_id: state.id)
@@ -1478,6 +1519,7 @@ City.create(name: "Sparks", state_id: state.id)
 City.create(name: "Virginia City", state_id: state.id)
 City.create(name: "Winnemucca", state_id: state.id)
 
+puts "Start New Hampshire Seeding ..."
 state = State.find_by(usps: 'NH')
 City.create(name: "Berlin", state_id: state.id)
 City.create(name: "Claremont", state_id: state.id)
@@ -1501,6 +1543,7 @@ City.create(name: "Rochester", state_id: state.id)
 City.create(name: "Salem", state_id: state.id)
 City.create(name: "Somersworth", state_id: state.id)
 
+puts "Start New Jersey Seeding ..."
 state = State.find_by(usps: 'NJ')
 City.create(name: "Asbury Park", state_id: state.id)
 City.create(name: "Atlantic City", state_id: state.id)
@@ -1566,6 +1609,7 @@ City.create(name: "West Orange", state_id: state.id)
 City.create(name: "Willingboro", state_id: state.id)
 City.create(name: "Woodbridge", state_id: state.id)
 
+puts "Start New Mexico Seeding ..."
 state = State.find_by(usps: 'NM')
 City.create(name: "Acoma", state_id: state.id)
 City.create(name: "Alamogordo", state_id: state.id)
@@ -1594,6 +1638,7 @@ City.create(name: "Taos", state_id: state.id)
 City.create(name: "Truth or Consequences", state_id: state.id)
 City.create(name: "Tucumcari", state_id: state.id)
 
+puts "Start New York Seeding ..."
 state = State.find_by(usps: 'NY')
 City.create(name: "Albany", state_id: state.id)
 City.create(name: "Amsterdam", state_id: state.id)
@@ -1701,6 +1746,7 @@ City.create(name: "White Plains", state_id: state.id)
 City.create(name: "Woodstock", state_id: state.id)
 City.create(name: "Yonkers", state_id: state.id)
 
+puts "Start North Carolina Seeding ..."
 state = State.find_by(usps: 'NC')
 City.create(name: "Asheboro", state_id: state.id)
 City.create(name: "Asheville", state_id: state.id)
@@ -1742,6 +1788,7 @@ City.create(name: "Wilmington", state_id: state.id)
 City.create(name: "Wilson", state_id: state.id)
 City.create(name: "Winston-Salem", state_id: state.id)
 
+puts "Start North Dakota Seeding ..."
 state = State.find_by(usps: 'ND')
 City.create(name: "Bismarck", state_id: state.id)
 City.create(name: "Devils Lake", state_id: state.id)
@@ -1756,6 +1803,7 @@ City.create(name: "Valley City", state_id: state.id)
 City.create(name: "Wahpeton", state_id: state.id)
 City.create(name: "Williston", state_id: state.id)
 
+puts "Start Ohio Seeding ..."
 state = State.find_by(usps: 'OH')
 City.create(name: "Akron", state_id: state.id)
 City.create(name: "Alliance", state_id: state.id)
@@ -1826,6 +1874,7 @@ City.create(name: "Yellow Springs", state_id: state.id)
 City.create(name: "Youngstown", state_id: state.id)
 City.create(name: "Zanesville", state_id: state.id)
 
+puts "Start Oklahoma Seeding ..."
 state = State.find_by(usps: 'OK')
 City.create(name: "Ada", state_id: state.id)
 City.create(name: "Altus", state_id: state.id)
@@ -1878,6 +1927,7 @@ City.create(name: "Vinita", state_id: state.id)
 City.create(name: "Wewoka", state_id: state.id)
 City.create(name: "Woodward", state_id: state.id)
 
+puts "Start Oregon Seeding ..."
 state = State.find_by(usps: 'OR')
 City.create(name: "Albany", state_id: state.id)
 City.create(name: "Ashland", state_id: state.id)
@@ -1918,6 +1968,7 @@ City.create(name: "Springfield", state_id: state.id)
 City.create(name: "The Dalles", state_id: state.id)
 City.create(name: "Tillamook", state_id: state.id)
 
+puts "Start Pennsylvania Seeding ..."
 state = State.find_by(usps: 'PA')
 City.create(name: "Abington", state_id: state.id)
 City.create(name: "Aliquippa", state_id: state.id)
@@ -1990,6 +2041,7 @@ City.create(name: "Wilkes-Barre", state_id: state.id)
 City.create(name: "Williamsport", state_id: state.id)
 City.create(name: "York", state_id: state.id)
 
+puts "Start Rhode Island Seeding ..."
 state = State.find_by(usps: 'RI')
 City.create(name: "Barrington", state_id: state.id)
 City.create(name: "Bristol", state_id: state.id)
@@ -2013,6 +2065,7 @@ City.create(name: "Westerly", state_id: state.id)
 City.create(name: "Wickford", state_id: state.id)
 City.create(name: "WoonsocketA", state_id: state.id)
 
+puts "Start South Carolina Seeding ..."
 state = State.find_by(usps: 'SC')
 City.create(name: "Abbeville", state_id: state.id)
 City.create(name: "Aiken", state_id: state.id)
@@ -2037,6 +2090,7 @@ City.create(name: "Spartanburg", state_id: state.id)
 City.create(name: "Sumter", state_id: state.id)
 City.create(name: "Union", state_id: state.id)
 
+puts "Start South Dakota Seeding ..."
 state = State.find_by(usps: 'SD')
 City.create(name: "Aberdeen", state_id: state.id)
 City.create(name: "Belle Fourche", state_id: state.id)
@@ -2061,6 +2115,7 @@ City.create(name: "Vermillion", state_id: state.id)
 City.create(name: "Watertown", state_id: state.id)
 City.create(name: "Yankton", state_id: state.id)
 
+puts "Start Tennessee Seeding ..."
 state = State.find_by(usps: 'TN')
 City.create(name: "Alcoa", state_id: state.id)
 City.create(name: "Athens", state_id: state.id)
@@ -2091,6 +2146,7 @@ City.create(name: "Oak Ridge", state_id: state.id)
 City.create(name: "Shelbyville", state_id: state.id)
 City.create(name: "Tullahoma", state_id: state.id)
 
+puts "Start Texas Seeding ..."
 state = State.find_by(usps: 'TX')
 City.create(name: "Abilene", state_id: state.id)
 City.create(name: "Alpine", state_id: state.id)
@@ -2170,6 +2226,7 @@ City.create(name: "Weatherford", state_id: state.id)
 City.create(name: "Wichita Falls", state_id: state.id)
 City.create(name: "Ysleta", state_id: state.id)
 
+puts "Start Utah Seeding ..."
 state = State.find_by(usps: 'UT')
 City.create(name: "Alta", state_id: state.id)
 City.create(name: "American Fork", state_id: state.id)
@@ -2205,6 +2262,7 @@ City.create(name: "Springville", state_id: state.id)
 City.create(name: "Tooele", state_id: state.id)
 City.create(name: "Vernal", state_id: state.id)
 
+puts "Start Vermont Seeding ..."
 state = State.find_by(usps: 'VT')
 City.create(name: "Barre", state_id: state.id)
 City.create(name: "Bellows Falls", state_id: state.id)
@@ -2223,6 +2281,7 @@ City.create(name: "Saint Johnsbury", state_id: state.id)
 City.create(name: "Sharon", state_id: state.id)
 City.create(name: "Winooski", state_id: state.id)
 
+puts "Start Virginia Seeding ..."
 state = State.find_by(usps: 'VA')
 City.create(name: "Abingdon", state_id: state.id)
 City.create(name: "Alexandria", state_id: state.id)
@@ -2255,6 +2314,7 @@ City.create(name: "Waynesboro", state_id: state.id)
 City.create(name: "Williamsburg", state_id: state.id)
 City.create(name: "Winchester", state_id: state.id)
 
+puts "Start Washington Seeding ..."
 state = State.find_by(usps: 'WA')
 City.create(name: "Aberdeen", state_id: state.id)
 City.create(name: "Anacortes", state_id: state.id)
@@ -2291,6 +2351,7 @@ City.create(name: "Walla Walla", state_id: state.id)
 City.create(name: "Wenatchee", state_id: state.id)
 City.create(name: "Yakima", state_id: state.id)
 
+puts "Start West Virginia Seeding ..."
 state = State.find_by(usps: 'WV')
 City.create(name: "Bath", state_id: state.id)
 City.create(name: "Beckley", state_id: state.id)
@@ -2329,6 +2390,7 @@ City.create(name: "Wheeling", state_id: state.id)
 City.create(name: "White Sulphur Springs", state_id: state.id)
 City.create(name: "Williamson", state_id: state.id)
 
+puts "Start Wisconsin Seeding ..."
 state = State.find_by(usps: 'WI')
 City.create(name: "Appleton", state_id: state.id)
 City.create(name: "Ashland", state_id: state.id)
@@ -2370,6 +2432,7 @@ City.create(name: "West Allis", state_id: state.id)
 City.create(name: "West Bend", state_id: state.id)
 City.create(name: "Wisconsin Dells", state_id: state.id)
 
+puts "Start Wyoming Seeding ..."
 state = State.find_by(usps: 'WY')
 City.create(name: "Buffalo", state_id: state.id)
 City.create(name: "Casper", state_id: state.id)
@@ -2392,3 +2455,5 @@ City.create(name: "Ten Sleep", state_id: state.id)
 City.create(name: "Thermopolis", state_id: state.id)
 City.create(name: "Torrington", state_id: state.id)
 City.create(name: "Worland", state_id: state.id)
+
+puts "Finished Seeding"
