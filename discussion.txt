@@ -1,14 +1,4 @@
 
-
-
-
-As a newer member, this rings very true to me. It’s taken a lot of proactivity on my part to find resources. The first time that I logged into the wiki was yesterday
-I don’t think that it’s the intent by any means, but it has at times felt like I’ve had to “break in” and some of that might be the tech
-I have some further thoughts on loomio. Async is good for participation but really bad for context and iteration. When you move to async voting, you are also giving up a shared understanding on what's being voted on. I think this is a nuanced effect, it's easy to say "the doc doesn't change, that's what we're voting on," but IMO there is meaningful context added by hearing people debate in real time about the pros/cons of a motion before making your decision. Not all motions need this, but the important ones really do. That's why the discord voting mechanism we've got has an "object" option, meaning "I think we should discuss this live"
-Right I don't think any of it is malicious, it's more of a sprawl issue and an organizational one.
-
-
-
 Honestly the thing I liked about loomio most was free and self-hosted. I liked the premise of it. Not committed to it in particular. I just feel that for the reasons I listed, I don't think Google drive is either working for me (and maybe others) and I have real concerns about it's scalability, especially when we go public.
 Is your concern mostly about visibility? Or is it the mechanics of getting people involved on a vote?
 Both. Like one thing I really liked about loomio was that it brought up the concept of having a dashboard of things which are awaiting my attention because it's been sent to my OC/SC/whatever group. Like a to-do list that isn't put together moments before the meeting or a self-organizing agenda.
