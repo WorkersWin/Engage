@@ -1,4 +1,8 @@
-It's brings process and visibility and accountability to it. Instead of just live attendance.
+
+
+
+
+
 Shooting a doc into Signal really isn't doing it for me personally.
 Nor is the prospect of reading 70 past resolutions and presumably far more draft or failed resolutions to understand what's been done before.
 I don't really participate in any OCs other than the SC. So I personally wouldn't be able to do that.
@@ -22,7 +26,7 @@ Has to be manually updated by a few people with access.
 Members can't update their own information. Either creates a lot of additional burden on core organizers or it becomes stale.
 Many fields aren't populated or are old, irrelevant, or just incorrect.
 There's a shocking number with no contact info at all.
-Notes about 1:1's aren't really that useful except the first time if it was assigned by a CWA person who pre-screened.
+Notes about 1:1's aren't really that useful except the first time if it was assigned by a union person who pre-screened.
 It doesn't have any mechanism for promoting followups or similar.
 I don't see how it scales once we get to being public with open signups. Manual data entry from some source that's receiving it in another format?
 Doesn't actively link identities. It's quite useful for looking up discord usernames, for example, but that information may or may not be accurate and people don't always use real names here on discord. With git, wiki, or other future systems, identities become even more difficult to manage by hand.
