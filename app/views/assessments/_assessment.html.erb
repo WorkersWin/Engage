@@ -1,11 +1,12 @@
 <div id="<%= dom_id assessment %>">
   <table class="table">
-    <tr><th>Assessed On</th><th>Assessee</th><th>Assessment</th><th>Assessor</th></tr>
+    <tr><th>Assessed On</th><th>Assessee</th><th>Assessment</th><th>Assessor</th><th>Notes</th></tr>
     <tr>
     <td><%= assessment.assessed_on %></td>
     <td><%= link_to assessment.assessee.first_name, contact_path(id: assessment.assessee_id) %> <%= link_to assessment.assessee.last_name, contact_path(id: assessment.assessee_id) %></td>
     <td><%= assessment.assessment_level.level %></td>
     <td><%= link_to assessment.assessor.first_name, contact_path(id: assessment.assessor_id) %> <%= link_to assessment.assessor.last_name, contact_path(id: assessment.assessor_id) %></td>
+    <td><%= assessment.note %></td>
     </tr>
   </table>
 </div>

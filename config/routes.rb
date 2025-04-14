@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resource :session
+  get "dashboards/index"
+  get "applicants/thanks"
+  resources :applicants
   resources :assessment_levels
   resources :assessments
   resources :cities
@@ -15,6 +17,8 @@ Rails.application.routes.draw do
   resources :organizations
   resources :passwords, param: :token
 #  resources :pages
+  resource :registration
+  resource :session
   resources :social_media_types
   resources :states
   resources :trainings
@@ -26,14 +30,14 @@ Rails.application.routes.draw do
   get "pages/index"
   get "pages/license"
   get "pages/privacy"
-  get "pages/roadmap"
+  get "pages/tech"
   get "pages/terms"
   get "about" => "pages#about"
   get "changelog" => "pages#changelog"
   get "faq" => "pages#faq"
   get "license" => "pages#license"
   get "privacy" => "pages#privacy"
-  get "roadmap" => "pages#roadmap"
+  get "tech" => "pages#tech"
   get "terms" =>"pages#terms"
 
 

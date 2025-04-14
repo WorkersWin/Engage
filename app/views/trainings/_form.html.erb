@@ -13,12 +13,12 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, autofocus: true, placeholder: "Training Name" %>
   </div>
 
   <div>
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, placeholder: "Training Description" %>
   </div>
 
   <div>

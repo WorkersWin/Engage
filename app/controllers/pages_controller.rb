@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  allow_unauthenticated_access only: %i[ about faq index privacy roadmap show terms ]
+  allow_unauthenticated_access only: %i[ about faq home index privacy tech show terms ]
   before_action :resume_session
 
   def about
@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   def privacy
   end
 
-  def roadmap
+  def tech
   end
 
   def show

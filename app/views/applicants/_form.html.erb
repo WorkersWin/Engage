@@ -1,0 +1,72 @@
+<%= form_with(model: applicant) do |form| %>
+  <% if applicant.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
+
+      <ul>
+        <% applicant.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name, autofocus: true, placeholder: "First Name" %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name, placeholder: "Last Name" %>
+  </div>
+
+  <div>
+    <%= form.label :pronouns, style: "display: block" %>
+    <%= form.text_field :pronouns, placeholder: "Pronouns" %>
+  </div>
+
+  <div>
+    <%= form.label :preferred_language, style: "display: block" %>
+    <%= form.text_field :preferred_language, placeholder: "Preferred Language" %>
+  </div>
+
+  <div>
+    <%= form.label :personal_email_address, style: "display: block" %>
+    <%= form.text_field :personal_email_address, placeholder: "Personal Email Address" %>
+  </div>
+
+  <div>
+    <%= form.label :personal_cell_phone, style: "display: block" %>
+    <%= form.text_field :personal_cell_phone, placeholder: "Personal Cell Phone Number" %>
+  </div>
+
+  <div>
+    <%= form.label :work_username, style: "display: block" %>
+    <%= form.text_field :work_username, placeholder: "Work Username / Alias" %>
+  </div>
+
+  <div>
+    <%= form.label :job_title, style: "display: block" %>
+    <%= form.text_field :job_title, placeholder: "Job Title" %>
+  </div>
+
+  <div>
+    <%= form.label :job_level, style: "display: block" %>
+    <%= form.text_field :job_level, placeholder: "Job Level" %>
+  </div>
+
+  <div>
+    <%= form.label :work_location_code, style: "display: block" %>
+    <%= form.text_field :work_location_code, placeholder: "Work Location Code" %>
+  </div>
+
+  <div>
+    <%= form.label :note, style: "display: block" %>
+    <%= form.textarea :note %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

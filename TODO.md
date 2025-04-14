@@ -2,11 +2,6 @@
 
 Adding items as they come up
 
-## Asssessments
-
-* Real-time totals for the last 6 months displayed
-* Way to list all contacts in specific level
-
 ## Campaigns
 
 * Title:string, Description:text, kickoff_date, launch_date, completion_date, outcome:text, successful:boolean, active:boolean
@@ -76,8 +71,3 @@ Adding items as they come up
 * Reminders
 
 
-## Supporting stuff
-
-* Countries
-* States
-* Cities

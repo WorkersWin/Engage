@@ -12,8 +12,7 @@
 
 <% unless contact.personal_email.blank? %>
   <p>
-    <b>Personal Email:</b> <%= contact.personal_email %>
-    <a href="mailto:<%= contact.personal_email%>">Email</a>
+    <b>Personal Email:</b> <%= mail_to contact.personal_email, contact.personal_email %>
   </p>
 <% end %>
 

@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_05_014153) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_14_171143) do
+  create_table "applicants", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "pronouns"
+    t.string "preferred_language"
+    t.string "personal_email_address"
+    t.string "personal_cell_phone"
+    t.string "work_username"
+    t.string "job_title"
+    t.string "job_level"
+    t.string "work_location_code"
+    t.text "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "assessment_levels", force: :cascade do |t|
     t.string "level"
     t.text "description"
@@ -61,15 +77,21 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_05_014153) do
   end
 
   create_table "contacts", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.string "pronouns"
+    t.string "work_username", default: "FIX ME", null: false
     t.string "mobile_phone"
     t.string "personal_email"
-    t.string "work_username"
     t.string "work_email"
+    t.string "discord_username"
+    t.string "signal_username"
+    t.integer "job_title_id"
+    t.integer "job_level_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["job_level_id"], name: "index_contacts_on_job_level_id"
+    t.index ["job_title_id"], name: "index_contacts_on_job_title_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -129,8 +151,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_05_014153) do
 
   create_table "notes", force: :cascade do |t|
     t.text "body"
+    t.integer "user_id", null: false
+    t.integer "assessment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["assessment_id"], name: "index_notes_on_assessment_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -194,10 +220,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_05_014153) do
   add_foreign_key "contact_notes", "notes", column: "notes_id"
   add_foreign_key "contact_took_trainings", "contacts"
   add_foreign_key "contact_took_trainings", "trainings"
+  add_foreign_key "contacts", "job_levels"
+  add_foreign_key "contacts", "job_titles"
   add_foreign_key "events", "event_types"
   add_foreign_key "locations", "cities"
   add_foreign_key "locations", "countries"
   add_foreign_key "locations", "states"
+  add_foreign_key "notes", "assessments"
+  add_foreign_key "notes", "users"
   add_foreign_key "sessions", "users"
   add_foreign_key "states", "countries"
 end
