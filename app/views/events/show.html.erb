@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
+<table class="table table-striped table-hover">
+<tr><th>Name</th><th>Type</th><th>Start Date</th><th>End Date</th><th>Description</th></tr>
 <%= render @event %>
+</table>
 
 <div>
   <%= link_to "Edit this event", edit_event_path(@event) %> |

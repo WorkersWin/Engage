@@ -1,6 +1,8 @@
 # TODO
 
-Adding items as they come up
+
+## Sign Ups
+* Switch from HTTP basic auth to controller-based password
 
 ## Campaigns
 

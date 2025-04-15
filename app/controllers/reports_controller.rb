@@ -3,13 +3,11 @@ class ReportsController < ApplicationController
 
   def current_assessment_levels
    @assessments = Assessment.current_assessments;
-   @total = @assessments.sum(&:last)
   end
 
   def assessment_levels_to_date
    target_date = report_params
    @assessments = Assessment.assessment_levels_to_date(params[:target_date]);
-   @total = @assessments.sum(&:last)
   end
 
   private

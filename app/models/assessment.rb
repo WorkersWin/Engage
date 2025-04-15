@@ -15,7 +15,7 @@ class Assessment < ApplicationRecord
 
   def self.current_assessments
     sql_command = <<-SQL
-      select t.assessment_level_id, t.level, count(*)
+      select t.assessment_level_id, t.level, count(*) as count
       from (
         select a.assessee_id, a.assessed_on, a.assessment_level_id, al.level
         from assessment_levels al, assessments a
@@ -39,7 +39,7 @@ class Assessment < ApplicationRecord
     puts target_date
     puts " END"
     sql_command = <<-SQL
-      select t.assessment_level_id, t.level, count(*)
+      select t.assessment_level_id, t.level, count(*) as count
       from (
         select a.assessee_id, a.assessed_on, a.assessment_level_id, al.level
         from assessment_levels al, assessments a

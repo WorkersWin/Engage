@@ -5,7 +5,7 @@ class CreateApplicants < ActiveRecord::Migration[8.0]
       t.string :last_name
       t.string :pronouns
       t.string :preferred_language
-      t.string :personal_email_address
+      t.string :personal_email
       t.string :personal_cell_phone
       t.string :work_username
       t.string :job_title

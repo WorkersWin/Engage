@@ -16,7 +16,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_14_171143) do
     t.string "last_name"
     t.string "pronouns"
     t.string "preferred_language"
-    t.string "personal_email_address"
+    t.string "personal_email"
     t.string "personal_cell_phone"
     t.string "work_username"
     t.string "job_title"
@@ -80,6 +80,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_14_171143) do
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "pronouns"
+    t.string "preferred_language"
     t.string "work_username", default: "FIX ME", null: false
     t.string "mobile_phone"
     t.string "personal_email"

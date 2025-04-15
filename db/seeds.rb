@@ -35,7 +35,20 @@ EventType.create(name: "OC Meeting")
 EventType.create(name: "Protest - Solidarity")
 EventType.create(name: "Protest - Our Union")
 EventType.create(name: "Protest - Walkout")
+EventType.create(name: "Training")
 EventType.create(name: "Union Day")
+
+puts "Start Event Seeding ..."
+Event.create(name: "Event One", start_datetime: "2025-01-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Two", start_datetime: "2025-02-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Three", start_datetime: "2025-03-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Four", start_datetime: "2025-04-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Five", start_datetime: "2025-05-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Six", start_datetime: "2023-04-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Seven", start_datetime: "2023-04-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Eight", start_datetime: "2023-01-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Nine", start_datetime: "2022-04-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Ten", start_datetime: "2025-04-24 01:13:00.000000000 +0000", event_type_id: 1)
 
 puts "Start Job Level Seeding ..."
 JobLevel.create(level: "1")

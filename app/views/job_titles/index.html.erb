@@ -2,13 +2,17 @@
 
 <h1>Job titles</h1>
 
+<%= link_to "New job title", new_job_title_path %>
 <div id="job_titles">
+  <table>
+  <thead>
+  <tr><th>Job Title</th><th>Description</th></tr>
+  </thead>
+  <tbody>
   <% @job_titles.each do |job_title| %>
     <%= render job_title %>
-    <p>
-      <%= link_to "Show this job title", job_title %>
-    </p>
   <% end %>
+  </tbody>
+  </table>
 </div>
 
-<%= link_to "New job title", new_job_title_path %>

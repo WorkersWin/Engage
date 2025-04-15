@@ -1,23 +1,14 @@
 <h1>Assessment Levels to Date</h1>
-
-
-
 <%= form_with url:"/reports/assessment_levels_to_date", method: :get do |form| %>
 Target Date: <%= form.date_field :target_date, required: true %>
 <%= form.submit 'Search' %>
 <% end %>
 
-
-<table class="table table-hover">
-<thead>
-<tr><th>Level</th><th>Count</th></tr>
-</thead>
-<tbody>
-<% @assessments.sort.each do |level| %>
-  <tr><td><%= level[1] %></td><td><%= level[2] %></td></tr>
+<% if @assessments.present? %>
+  <% @assessments.each do |a| %>
+    Level: <%= a["level"] %> Count: <%= a["count"] %>
+    <br>
+  <% end %>
+<% else %>
+  <p>No Assessments for the Target Date</p>
 <% end %>
-</tbody>
-<tfoot>
-  <tr><td>Total</td><td><%= @total %></td></tr>
-</tfoot>
-</table>

@@ -4,6 +4,7 @@ class CreateContacts < ActiveRecord::Migration[7.0]
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.string :pronouns
+      t.string :preferred_language
       t.string :work_username, null: false, default: "FIX ME"
       t.string :mobile_phone
       t.string :personal_email

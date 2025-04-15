@@ -1,7 +1,28 @@
+
+<h2>Upcoming Events</h2>
+<table class="table">
+<tr><th>Event Title</th><th>Date/Time</th><th>Description</th></tr>
+<% Event.where("start_datetime >= ?", Date.current).order(:start_datetime)[0,5].each do |event| %>
+<tr><td><%= link_to event.name, event %></td><td><%= event.start_datetime %></td><td><%= event.description %></td></tr>
+<% end %>
+</table>
+
+
+
+
+
+
 <h2>Current Stats</h2>
 <ul>
   <li><%= link_to pluralize(Contact.count, "Contact"), contacts_path %></li>
-  <li><%= link_to pluralize(Assessment.count, "Assessment"), assessments_path %></li>
+
+  <li>Current Assessment Levels
+    <ul>
+    <% @assessments.each do |a| %>
+      <li>Level: <%= a["level"] %> Count: <%= a["count"] %></li>
+    <% end %>
+    </ul>
+</li>
   <li><%= link_to pluralize(Note.count, "Note"), notes_path %></li>
   <li>Longest span without member communication: XXX</li>
   <li>XXX members gained in the last 30 days</li>
