@@ -20,7 +20,7 @@ Contact.create!(work_username: "admin", first_name: "Admin", last_name: "Admin",
 Contact.create!(work_username: "one", first_name: "one", last_name: "one", personal_email: "one@example.com")
 
 puts "Start Contact Seeding ..."
-100.times do |i|
+10.times do |i|
   Contact.create!(work_username: "work_username-#{i}", first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", mobile_phone: "cellphone_#{i}")
 end
 
