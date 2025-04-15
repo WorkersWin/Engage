@@ -30,14 +30,14 @@ Rails.application.routes.draw do
   get "pages/index"
   get "pages/license"
   get "pages/privacy"
-  get "pages/tech"
+  get "pages/guide"
   get "pages/terms"
   get "about" => "pages#about"
   get "changelog" => "pages#changelog"
   get "faq" => "pages#faq"
   get "license" => "pages#license"
   get "privacy" => "pages#privacy"
-  get "tech" => "pages#tech"
+  get "guide" => "pages#guide"
   get "terms" =>"pages#terms"
 
 

@@ -1,5 +1,6 @@
+<% if Applicant.count >= 1 %><h2><%= link_to Applicant.count.to_s + " New Applicants To Review", applicants_path %></h2><% end %>
 
-<h2>Upcoming Events</h2>
+<h2>Next 5 Upcoming Events</h2>
 <table class="table">
 <tr><th>Event Title</th><th>Date/Time</th><th>Description</th></tr>
 <% Event.where("start_datetime >= ?", Date.current).order(:start_datetime)[0,5].each do |event| %>
@@ -7,10 +8,9 @@
 <% end %>
 </table>
 
+<h2>My Tasks (coming soon)</h2>
 
-
-
-
+<h2>Messages (coming soon)</h2>
 
 <h2>Current Stats</h2>
 <ul>

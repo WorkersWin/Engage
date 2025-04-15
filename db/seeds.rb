@@ -11,18 +11,30 @@ puts "Start Seeding ..."
 
 
 
-##################################################
-# REMOVE THE DEFAULT USER FROM PRODUCTION SYSTEMS!
-##################################################
-User.create(username: "one", email_address: "one@one.com", password: "one", password_confirmation: "one")
+####################################################
+# CHANGE THE DEFAULT USERS FOR PRODUCTION SYSTEMS! #
+####################################################
+User.create(username: "admin", email_address: "admin@example.com", password: "password", password_confirmation: "password")
+User.create(username: "one", email_address: "one@example.com", password: "password", password_confirmation: "password")
 
-puts "Start User Seeding ..."
-# some default users for testing
+Contact.create!(work_username: "admin", first_name: "Admin", last_name: "Admin", personal_email: "admin@example.com")
+Contact.create!(work_username: "one", first_name: "one", last_name: "one", personal_email: "one@example.com")
+
+puts "Start Contact Seeding ..."
 1000.times do |i|
   Contact.create!(work_username: "work_username-#{i}", first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", mobile_phone: "cellphone_#{i}")
 end
 
 # General seeds
+puts "Start Applicant Seeding ..."
+Applicant.create(first_name: "one", last_name: "email address matches existing uesr", personal_email_address: "one@example.com")
+Applicant.create(first_name: "two first", last_name: "two last", personal_email_address: "two@example.com")
+Applicant.create(first_name: "three first", last_name: "three last", personal_email_address: "three@example.com")
+Applicant.create(first_name: "four", last_name: "last four", personal_email_address: "@example.com")
+Applicant.create(first_name: "five")
+Applicant.create(last_name: "nope", personal_email_address: "never signing up")
+Applicant.create(first_name: "twenty", last_name: "duplicate email address", personal_email_address: "one.one@example.com")
+
 puts "Start Assessment Level Seeding ..."
 AssessmentLevel.create!(level: "1")
 AssessmentLevel.create!(level: "2")
