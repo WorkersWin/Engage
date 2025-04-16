@@ -22,11 +22,13 @@
   </div>
 
   <div>
+    <br><strong>THIS IS BEING CHANGED TO AN INLINE SEARCH</strong><br>
     <%= assessment_form.label :assessee_id, style: "display: block" %>
     <%= collection_select(:assessment, :assessee_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
 
   <div>
+    <br><strong>THIS IS BEING CHANGED TO AN INLINE SEARCH</strong><br>
     <%= assessment_form.label :assessor_id, style: "display: block" %>
     <%= collection_select(:assessment, :assessor_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>

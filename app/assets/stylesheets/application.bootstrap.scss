@@ -1,22 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-
-
-
-
 div .join-us { margin: 25px; padding: 25px; background-color: orange; color: #000; }
-
-
 
 .nav-item { color: #000; }
 .dropdown-toggle { color: #000; }
 .nav-item .dropdown-toggle { color: #000; }
 .-bs-nav-link-color { color: #000; }
-
-
-
-
 
 /* broke */
 .leftsidenav {
@@ -69,7 +59,7 @@ div .join-us { margin: 25px; padding: 25px; background-color: orange; color: #00
 
 nav { background-color: #eee; }
 
-footer { margin-top: 50px; width: 100%; background-color: #eee; }
+footer { margin-top: 50px; width: 100%; background-color: #eee; text-align: center; }
 .builtby { margin-left: 10px; margin-right: 10px; }
 .poweredby { margin-left: 10px; }
 .copyright { margin-right: 10px; }

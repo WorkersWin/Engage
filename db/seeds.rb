@@ -14,7 +14,7 @@ puts "Start Seeding ..."
 ####################################################
 # CHANGE THE DEFAULT USERS FOR PRODUCTION SYSTEMS! #
 ####################################################
-User.create(username: "admin", email_address: "admin@example.com", password: "password", password_confirmation: "password")
+User.create(username: "admin", email_address: "admin@example.com", password: "unionstrong!!", password_confirmation: "unionstrong!!")
 
 Contact.create!(work_username: "admin", first_name: "Admin", last_name: "Admin", personal_email: "admin@example.com")
 Contact.create!(work_username: "one", first_name: "one", last_name: "one", personal_email: "one@example.com")
