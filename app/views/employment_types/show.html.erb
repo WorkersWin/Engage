@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @employment_type %>
+
+<div>
+  <%= link_to "Edit this employment type", edit_employment_type_path(@employment_type) %> |
+  <%= link_to "Back to employment types", employment_types_path %>
+
+  <%= button_to "Destroy this employment type", @employment_type, method: :delete %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_16_010925) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_16_194613) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -54,15 +54,33 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_010925) do
     t.string "last_name"
     t.string "pronouns"
     t.string "preferred_language"
+    t.string "birthday"
+    t.string "tshirt_size"
     t.string "personal_email_address"
-    t.string "personal_cell_phone"
-    t.string "work_username"
+    t.string "personal_phone"
+    t.string "address_1"
+    t.string "address_2"
+    t.string "city"
+    t.string "state"
+    t.string "postal_code"
+    t.string "country"
+    t.boolean "sms_updates", default: true, null: false
     t.string "job_title"
     t.string "job_level"
-    t.string "work_location_code"
+    t.string "team_name"
+    t.string "organization"
+    t.string "department"
+    t.string "campus"
+    t.string "location_code"
+    t.boolean "direct_reports", default: false, null: false
+    t.string "work_email_address"
     t.text "note"
+    t.integer "user_id"
+    t.integer "employment_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["employment_type_id"], name: "index_applicants_on_employment_type_id"
+    t.index ["user_id"], name: "index_applicants_on_user_id"
   end
 
   create_table "assessment_levels", force: :cascade do |t|
@@ -138,6 +156,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_010925) do
     t.string "alpha2"
     t.string "alpha3"
     t.string "numeric"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employment_types", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

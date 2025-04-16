@@ -1,7 +1,5 @@
 <% if Applicant.count >= 1 %><h2><%= link_to Applicant.count.to_s + " New Applicants To Review", applicants_path %></h2><% end %>
 
-
-
 <% ec = Event.where("start_datetime >= ?", Date.current).count %>
 
 <h2><%= link_to "#{ec} Upcoming Events", events_path %></h2>
@@ -32,9 +30,9 @@
   <li>There Are No <%= link_to "Assessments", assessments_path %></li>
   <% end %>
   <li><%= link_to pluralize(Note.count, "Note"), notes_path %></li>
-  <li>Longest span without member communication: XXX</li>
-  <li>XXX members gained in the last 30 days</li>
-  <li>XXX members lost in the last 30 days</li>
+  <li>(Soon) Longest span without member communication: XXX</li>
+  <li>(Soon) XXX members gained in the last 30 days</li>
+  <li>(Soon) XXX members lost in the last 30 days</li>
   <li>Something</li>
   <li>Something Else</li>
   <li>Another Thing</li>

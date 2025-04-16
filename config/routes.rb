@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :employment_types
   get "dashboards/index"
   get "applicants/thanks"
   resources :applicants

@@ -1,0 +1,12 @@
+<% content_for :title, "Editing employment type" %>
+
+<h1>Editing employment type</h1>
+
+<%= render "form", employment_type: @employment_type %>
+
+<br>
+
+<div>
+  <%= link_to "Show this employment type", @employment_type %> |
+  <%= link_to "Back to employment types", employment_types_path %>
+</div>
