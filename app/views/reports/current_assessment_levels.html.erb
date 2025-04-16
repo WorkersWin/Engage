@@ -1,4 +1,9 @@
+<h1>Current Assessment Levels</h1>
+<% if @assessments.present? %>
 <% @assessments.each do |a| %>
 Level: <%= a["level"] %> Count: <%= a["count"] %>
 <br>
+<% end %>
+<% else %>
+<p>There are no <%= link_to "Assessments", assessments_path %></p>
 <% end %>
