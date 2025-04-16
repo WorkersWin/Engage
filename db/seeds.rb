@@ -53,9 +53,6 @@ Organization.create(name: "Weyland-Yutani Corp")
 Organization.create(name: "Wonka Industries")
 Organization.create(name: "Yakonomo Corporation")
 Organization.create(name: "Yoyodyne Propulsion Systems")
-Organization.create(name: "Oscorp")
-Organization.create(name: "Oscorp")
-Organization.create(name: "Oscorp")
 
 puts "Start Contact Seeding ..."
 Contact.create!(work_username: "admin", first_name: "Admin", last_name: "Admin", personal_email: "admin@example.com")
