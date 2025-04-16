@@ -392,7 +392,7 @@ DEPENDENCIES
   kamal
   pagy (~> 9.3, >= 9.3.3)
   propshaft
-  puma (>= 6.0)
+  puma (>= 5.0)
   rails (~> 8.0.2)
   rubocop-rails-omakase
   selenium-webdriver
