@@ -19,7 +19,18 @@
 <ul>
   <li><%= link_to pluralize(Contact.count, "Contact"), contacts_path %></li>
   <% if @assessments.present? %>
-  <li>Current Assessment Levels
+  <li>Current <%= link_to "Assessment", assessments_path %> Levels
+    <ul>
+    <% @assessments.each do |a| %>
+      <li>Level: <%= a["level"] %> Count: <%= a["count"] %></li>
+    <% end %>
+    </ul>
+  </li>
+  <% else %>
+  <li>There Are No <%= link_to "Assessments", assessments_path %></li>
+  <% end %>
+  <% if Organization.present? %>
+  <li>There are <%= link_to Organization.count.to_s + " Organizations", organizations_path %></li>
     <ul>
     <% @assessments.each do |a| %>
       <li>Level: <%= a["level"] %> Count: <%= a["count"] %></li>

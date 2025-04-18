@@ -71,7 +71,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_194613) do
     t.string "organization"
     t.string "department"
     t.string "campus"
-    t.string "location_code"
+    t.string "work_location_code"
     t.boolean "direct_reports", default: false, null: false
     t.string "work_email_address"
     t.text "note"

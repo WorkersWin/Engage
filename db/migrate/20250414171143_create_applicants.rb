@@ -23,7 +23,7 @@ class CreateApplicants < ActiveRecord::Migration[8.0]
       t.string :organization
       t.string :department
       t.string :campus
-      t.string :location_code
+      t.string :work_location_code
       t.boolean :direct_reports, null: false, default: false
       t.string :work_email_address
       t.text :note

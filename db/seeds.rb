@@ -78,6 +78,18 @@ AssessmentLevel.create!(level: "3")
 AssessmentLevel.create!(level: "HR")
 AssessmentLevel.create!(level: "MGR")
 
+puts "Start Assessment Seeding ..."
+Assessment.create!(assessed_on: "2020-01-01", assessment_level_id: 2, assessor_id: 1, assessee_id: 3)
+Assessment.create!(assessed_on: "2021-02-01", assessment_level_id: 1, assessor_id: 5, assessee_id: 3)
+Assessment.create!(assessed_on: "2025-01-25", assessment_level_id: 3, assessor_id: 10, assessee_id: 5)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 4, assessor_id: 1, assessee_id: 8)
+Assessment.create!(assessed_on: "2025-03-04", assessment_level_id: 5, assessor_id: 11, assessee_id: 20)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 1, assessor_id: 12, assessee_id: 32)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 2, assessor_id: 14, assessee_id: 44)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 3, assessor_id: 15, assessee_id: 50)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 5, assessor_id: 16, assessee_id: 13)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 2, assessor_id: 17, assessee_id: 23)
+
 puts "Start Event Type Seeding ..."
 EventType.create(name: "OC Meeting")
 EventType.create(name: "Protest - Solidarity")

@@ -71,6 +71,6 @@ class ApplicantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def applicant_params
-      params.expect(applicant: [ :first_name, :last_name, :personal_email_address, :personal_cell_phone, :preferred_language, :pronouns, :work_username, :job_title, :job_level, :work_location_code, :note ])
+      params.expect(applicant: [ :first_name, :last_name, :personal_email_address, :personal_phone, :preferred_language, :pronouns, :work_email_address, :job_title, :job_level, :work_location_code, :note ])
     end
 end
