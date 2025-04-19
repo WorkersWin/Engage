@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[8.0]
       t.string :first_name
       t.string :last_name
       t.string :mobile_phone
+      t.belongs_to :contact, foreign_key: true
 
       t.timestamps
     end

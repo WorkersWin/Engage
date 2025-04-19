@@ -56,7 +56,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_194613) do
     t.string "preferred_language"
     t.string "birthday"
     t.string "tshirt_size"
-    t.string "personal_email_address"
+    t.string "personal_email"
     t.string "personal_phone"
     t.string "address_1"
     t.string "address_2"
@@ -73,7 +73,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_194613) do
     t.string "campus"
     t.string "work_location_code"
     t.boolean "direct_reports", default: false, null: false
-    t.string "work_email_address"
+    t.string "work_email"
     t.text "note"
     t.integer "user_id"
     t.integer "employment_type_id"
@@ -271,8 +271,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_194613) do
     t.string "first_name"
     t.string "last_name"
     t.string "mobile_phone"
+    t.integer "contact_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_users_on_contact_id"
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
@@ -296,4 +298,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_194613) do
   add_foreign_key "notes", "users"
   add_foreign_key "sessions", "users"
   add_foreign_key "states", "countries"
+  add_foreign_key "users", "contacts"
 end

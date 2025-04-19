@@ -7,7 +7,7 @@ class CreateApplicants < ActiveRecord::Migration[8.0]
       t.string :preferred_language
       t.string :birthday
       t.string :tshirt_size
-      t.string :personal_email_address
+      t.string :personal_email
       t.string :personal_phone
       t.string :address_1
       t.string :address_2
@@ -16,7 +16,6 @@ class CreateApplicants < ActiveRecord::Migration[8.0]
       t.string :postal_code
       t.string :country
       t.boolean :sms_updates, null: false, default: true
-      
       t.string :job_title
       t.string :job_level
       t.string :team_name
@@ -25,7 +24,7 @@ class CreateApplicants < ActiveRecord::Migration[8.0]
       t.string :campus
       t.string :work_location_code
       t.boolean :direct_reports, null: false, default: false
-      t.string :work_email_address
+      t.string :work_email
       t.text :note
       t.references :user, null: true
       t.references :employment_type

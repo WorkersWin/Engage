@@ -11,6 +11,7 @@ class ApplicantsController < ApplicationController
 
   # GET /applicants/1 or /applicants/1.json
   def show
+    @existing_contact = Contact.find_by(personal_email: @applicant.personal_email)
   end
 
   # GET /applicants/new
@@ -71,6 +72,6 @@ class ApplicantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def applicant_params
-      params.expect(applicant: [ :first_name, :last_name, :personal_email_address, :personal_phone, :preferred_language, :pronouns, :work_email_address, :job_title, :job_level, :work_location_code, :note ])
+      params.expect(applicant: [ :first_name, :last_name, :personal_email, :personal_phone, :preferred_language, :pronouns, :work_email, :job_title, :job_level, :work_location_code, :note ])
     end
 end

@@ -1,3 +1,5 @@
+<% if @existing_contact %><h1>This Applicant is already in Contacts</h1><% end %>
+
 <p><b>First Name:</b> <%= contact.first_name %></p>
 <p><b>Last Name:</b> <%= contact.last_name %></p>
 <% unless contact.pronouns.blank? %><p><b>Pronouns:</b> <%= contact.pronouns %></p><% end %>

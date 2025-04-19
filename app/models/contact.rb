@@ -12,6 +12,7 @@ class Contact < ApplicationRecord
   has_many :notes, through: :contact_note
   accepts_nested_attributes_for :contact_note
 
+  has_one :user
 
   def current_assessment
     received_assessments.current.first
