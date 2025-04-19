@@ -2,6 +2,11 @@
   <p>
     <strong>Name:</strong>
     <%= link_to event_type.name,event_type %>
+  <p>
+  <p><strong>Number of Events with this Type</strong>
+    <%= event_type.events&.count %>
+  </p>
+  <p>
     <strong>Description:</strong>
     <%= event_type.description %>
   </p>

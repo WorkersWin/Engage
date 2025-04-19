@@ -47,19 +47,20 @@ Organization.create(name: "Yoyodyne Propulsion Systems")
 
 puts "Start Contact Seeding ..."
 Contact.create!(work_username: "one", first_name: "one", last_name: "one", personal_email: "one@example.com")
+Contact.create!(work_username: "two", first_name: "two", last_name: "two", personal_email: "one@example.com", personal_phone: "123")
 1000.times do |i|
-  Contact.create!(work_username: "work_username-#{i}", first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", mobile_phone: "cellphone_#{i}")
+  Contact.create!(work_username: "work_username-#{i}", first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", personal_phone: "cellphone_#{i}")
 end
 
 # General seeds
 puts "Start Applicant Seeding ..."
-Applicant.create(first_name: "one", last_name: "email address matches existing uesr", personal_email: "one@example.com")
-Applicant.create(first_name: "two first", last_name: "two last", personal_email: "two@example.com")
-Applicant.create(first_name: "three first", last_name: "three last", personal_email: "three@example.com")
-Applicant.create(first_name: "four", last_name: "last four", personal_email: "@example.com")
-Applicant.create(first_name: "five")
-Applicant.create(last_name: "nope", personal_email: "never signing up")
-Applicant.create(first_name: "twenty", last_name: "duplicate email address", personal_email: "one.one@example.com")
+Applicant.create!(first_name: "one", last_name: "email address matches existing uesr", personal_email: "one@example.com", personal_phone: "321123")
+Applicant.create!(first_name: "matches existing contact personal phone", last_name: "my last name", personal_email: "two@example.com", personal_phone: "123")
+Applicant.create!(first_name: "three first", last_name: "three last", personal_email: "three@example.com", personal_phone: "this is my phone number")
+Applicant.create!(first_name: "four", last_name: "last four", personal_email: "@example.com", personal_phone: "867-5309")
+Applicant.create!(first_name: "five", personal_email: "five@example.com", personal_phone: "new phone who dis?")
+Applicant.create!(last_name: "nope", personal_email: "never signing up", personal_phone: "555-1212")
+Applicant.create!(first_name: "twenty", last_name: "duplicate email address", personal_email: "one@example.com", personal_phone: "23r42323djjdj232")
 
 puts "Start Assessment Level Seeding ..."
 AssessmentLevel.create!(level: "1")
@@ -81,7 +82,9 @@ Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 5, assessor_i
 Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 2, assessor_id: 17, assessee_id: 23)
 
 puts "Start Event Type Seeding ..."
+EventType.create(name: "Lunch")
 EventType.create(name: "OC Meeting")
+EventType.create(name: "Office Hours")
 EventType.create(name: "Protest - Solidarity")
 EventType.create(name: "Protest - Our Union")
 EventType.create(name: "Protest - Walkout")
@@ -94,11 +97,19 @@ Event.create(name: "Event Two", start_datetime: "2025-02-24 01:13:00.000000000 +
 Event.create(name: "Event Three", start_datetime: "2025-03-24 01:13:00.000000000 +0000", event_type_id: 1)
 Event.create(name: "Event Four", start_datetime: "2025-04-24 01:13:00.000000000 +0000", event_type_id: 1)
 Event.create(name: "Event Five", start_datetime: "2025-05-24 01:13:00.000000000 +0000", event_type_id: 1)
-Event.create(name: "Event Six", start_datetime: "2023-04-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Six", start_datetime: "2023-04-24 01:13:00.000000000 +0000", event_type_id: 2)
 Event.create(name: "Event Seven", start_datetime: "2023-04-24 01:13:00.000000000 +0000", event_type_id: 1)
 Event.create(name: "Event Eight", start_datetime: "2023-01-24 01:13:00.000000000 +0000", event_type_id: 1)
-Event.create(name: "Event Nine", start_datetime: "2022-04-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Nine", start_datetime: "2022-04-24 01:13:00.000000000 +0000", event_type_id: 3)
 Event.create(name: "Event Ten", start_datetime: "2025-04-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event 11", start_datetime: "2025-05-01 04:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event 12", start_datetime: "2025-05-24 01:13:00.000000000 +0000", event_type_id: 4)
+Event.create(name: "Event 13", start_datetime: "2025-06-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event 24", start_datetime: "2025-07-04 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event 333", start_datetime: "2025-04-29 01:13:00.000000000 +0000", event_type_id: 4)
+Event.create(name: "Event something", start_datetime: "2025-07-24 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Another Event", start_datetime: "2025-06-21 01:13:00.000000000 +0000", event_type_id: 1)
+Event.create(name: "Event Fifty", start_datetime: "2025-04-22 01:13:00.000000000 +0000", event_type_id: 1)
 
 puts "Start Job Level Seeding ..."
 JobLevel.create(level: "1")

@@ -16,7 +16,7 @@ class ContactsTest < ApplicationSystemTestCase
 
     fill_in "First name", with: @contact.first_name
     fill_in "Last name", with: @contact.last_name
-    fill_in "Mobile phone", with: @contact.mobile_phone
+    fill_in "Mobile phone", with: @contact.personal_phone
     fill_in "Personal email", with: @contact.personal_email
     fill_in "Pronouns", with: @contact.pronouns
     click_on "Create Contact"
@@ -31,7 +31,7 @@ class ContactsTest < ApplicationSystemTestCase
 
     fill_in "First name", with: @contact.first_name
     fill_in "Last name", with: @contact.last_name
-    fill_in "Mobile phone", with: @contact.mobile_phone
+    fill_in "Mobile phone", with: @contact.personal_phone
     fill_in "Personal email", with: @contact.personal_email
     fill_in "Pronouns", with: @contact.pronouns
     click_on "Update Contact"

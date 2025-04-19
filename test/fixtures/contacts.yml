@@ -4,12 +4,12 @@ one:
   first_name: MyString
   last_name: MyString
   pronouns: MyString
-  mobile_phone: MyString
+  personal_phone: MyString
   personal_email: MyString
 
 two:
   first_name: MyString
   last_name: MyString
   pronouns: MyString
-  mobile_phone: MyString
+  personal_phone: MyString
   personal_email: MyString

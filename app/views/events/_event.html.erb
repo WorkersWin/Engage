@@ -3,7 +3,7 @@
     <%= link_to event.name, event %>
   </td>
   <td>
-    <%= link_to event.event_type.name, event %>
+    <%= link_to event.event_type.name, event.event_type %>
   </td>
 
   <td><% unless event.start_datetime.blank? %>

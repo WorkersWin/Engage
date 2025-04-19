@@ -138,7 +138,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_16_194613) do
     t.string "pronouns"
     t.string "preferred_language"
     t.string "work_username", default: "FIX ME", null: false
-    t.string "mobile_phone"
+    t.string "personal_phone"
     t.string "personal_email"
     t.string "work_email"
     t.string "discord_username"

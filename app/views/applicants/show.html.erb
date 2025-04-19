@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<% if @existing_contact.present? %><p style="text-align: center;"><span style="background-color: red; font-size: 2em;">CAUTION!</span> <span style="background-color: #ddd; font-size: 2em;">There is a Contact with the same address: <%= link_to @existing_contact.personal_email, @existing_contact %></span> <span style="background-color: red; font-size: 2em">CAUTION!</span></p><% end %>
+<% if @existing_email.present? %><p style="text-align: center;"><span style="background-color: red; font-size: 2em;">CAUTION!</span> <span style="background-color: #ddd; font-size: 2em;">There is a Contact with the same email: <%= link_to @existing_email.personal_email, @existing_email%></span> <span style="background-color: red; font-size: 2em">CAUTION!</span></p><% end %>
+<% if @existing_phone.present? %><p style="text-align: center;"><span style="background-color: red; font-size: 2em;">CAUTION!</span> <span style="background-color: #ddd; font-size: 2em;">There is a Contact with the same phone: <%= link_to @existing_phone.personal_phone, @existing_phone%></span> <span style="background-color: red; font-size: 2em">CAUTION!</span></p><% end %>
 
 <%= render @applicant %>
 

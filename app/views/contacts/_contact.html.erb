@@ -4,11 +4,11 @@
 <p><b>Last Name:</b> <%= contact.last_name %></p>
 <% unless contact.pronouns.blank? %><p><b>Pronouns:</b> <%= contact.pronouns %></p><% end %>
 
-<% unless contact.mobile_phone.blank? %>
+<% unless contact.personal_phone.blank? %>
 <p>
-  <b>Cell Phone:</b> <%= contact.mobile_phone %>
-  <a href="sms:<%= contact.mobile_phone%>">Text</a> |
-  <a href="tel:<%= contact.mobile_phone%>">Call</a>
+  <b>Cell Phone:</b> <%= contact.personal_phone %>
+  <a href="sms:<%= contact.personal_phone%>">Text</a> |
+  <a href="tel:<%= contact.personal_phone%>">Call</a>
   </p>
 <% end %>
 

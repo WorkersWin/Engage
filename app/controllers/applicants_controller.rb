@@ -11,7 +11,8 @@ class ApplicantsController < ApplicationController
 
   # GET /applicants/1 or /applicants/1.json
   def show
-    @existing_contact = Contact.find_by(personal_email: @applicant.personal_email)
+    @existing_email = Contact.find_by(personal_email: @applicant.personal_email) if @applicant.personal_email.present?
+    @existing_phone = Contact.find_by(personal_phone: @applicant.personal_phone) if @applicant.personal_phone.present?
   end
 
   # GET /applicants/new
