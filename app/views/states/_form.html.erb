@@ -11,22 +11,32 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :country, style: "display: block" %>
+  <div class="field">
+    <%= form.label :country, class: "label" %>
+  <div class="control">
+  <div class="select">
     <%= collection_select(:state, :country_id, Country.all.order(:name), :id, :name) %>
   </div>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :usps, style: "display: block" %>
-    <%= form.text_field :usps %>
+  <div class="field">
+    <%= form.label :name, class: "label" %>
+  <div class="control">
+    <%= form.text_field :name, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+    <%= form.label :usps, class: "label" %>
+  <div class="control">
+    <%= form.text_field :usps, class: "input" %>
+  </div>
+  </div>
+
+  <div class="field">
+  <div class="control">
+    <%= form.submit "Submit", class: "button is-link" %>
+  </div>
   </div>
 <% end %>

@@ -11,17 +11,23 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :level, style: "display: block" %>
-    <%= form.text_field :level %>
+  <div class="field">
+    <%= form.label :level, class: "label" %>
+  <div class="control">
+    <%= form.text_field :level, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="field">
+    <%= form.label :description, class: "label" %>
+  <div class="control">
+    <%= form.text_area :description, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+  <div class="control">
+    <%= form.submit "Submit", class: "button is-link" %>
+  </div>
   </div>
 <% end %>

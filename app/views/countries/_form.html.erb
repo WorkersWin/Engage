@@ -11,27 +11,37 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.label :name, class: "label" %>
+  <div class="control">
+    <%= form.text_field :name, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :alpha2, style: "display: block" %>
-    <%= form.text_field :alpha2 %>
+  <div class="field">
+    <%= form.label :alpha2, class: "label" %>
+  <div class="control">
+    <%= form.text_field :alpha2, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :alpha3, style: "display: block" %>
-    <%= form.text_field :alpha3 %>
+  <div class="field">
+    <%= form.label :alpha3, class: "label" %>
+  <div class="control">
+    <%= form.text_field :alpha3, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :numeric, style: "display: block" %>
-    <%= form.text_field :numeric %>
+  <div class="field">
+    <%= form.label :numeric, class: "label" %>
+  <div class="control">
+    <%= form.text_field :numeric, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+  <div class="control">
+    <%= form.submit "Submit", class: "button is-link" %>
+  </div>
   </div>
 <% end %>

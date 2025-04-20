@@ -3,7 +3,7 @@
 <h1>Cities</h1>
 <%= link_to "New city", new_city_path %>
 
-<%== pagy_nav_bulma(@pagy) %>
+<%== pagy_bulma_nav(@pagy) %>
 <div id="cities">
   <% @cities.each do |city| %>
     <%= render city %>

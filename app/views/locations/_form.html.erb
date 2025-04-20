@@ -11,37 +11,57 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :code, style: "display: block" %>
-    <%= form.text_field :code %>
+  <div class="field">
+    <%= form.label :code, class: "label" %>
+  <div class="control">
+    <%= form.text_field :code, class: "input" %>
+  </div>
   </div>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.label :name, class: "label" %>
+  <div class="control">
+    <%= form.text_field :name, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="field">
+    <%= form.label :description, class: "label" %>
+  <div class="control">
+    <%= form.text_area :description, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :city_id, style: "display: block" %>
-    <%= form.text_field :city_id %>
+<!-- FIXME: need to list cities based on the selected State -->
+  <div class="field">
+    <%= form.label :city_id, class: "label" %>
+  <div class="control">
+    <%= form.text_field :city_id, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :state_id, style: "display: block" %>
-    <%= form.text_field :state_id %>
+  <div class="field">
+    <%= form.label :state_id, class: "label" %>
+  <div class="control">
+  <div class="select">
+    <%= collection_select(:form, :state_id, State.all.order(:name), :id, :name, {include_blank: true}, {}) %>
+  </div>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :country_id, style: "display: block" %>
-    <%= form.text_field :country_id %>
+  <div class="field">
+    <%= form.label :country_id, class: "label" %>
+  <div class="control">
+  <div class="select">
+    <%= collection_select(:form, :country_id, Country.all.order(:name), :id, :name, {include_blank: true}, {}) %>
+  </div>
+  </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+  <div class="control">
+    <%= form.submit "Submit", class: "button is-link" %>
+  </div>
   </div>
 <% end %>
