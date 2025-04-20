@@ -8,7 +8,7 @@
 <% end %>
 
 <%= turbo_frame_tag :contacts do %>
-<%== pagy_nav_bootstrap(@pagy) %>
+<%== pagy_nav_bulma(@pagy) %>
   <div id="contacts-container">
     <% @contacts.each do |contact| %>
       <%= render contact %>
