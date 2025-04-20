@@ -47,18 +47,17 @@
     
     });
     </script>
+    <div class="container is-fluid">
     <header>
       <%= render 'layouts/navbar' %>
     </header>
-    <div class="container-fluid">
       <% if notice %><p class="notice"><%= notice %></p><% end %>
       <% if alert %><p class="alert"><%= alert %></p><% end %>
-    </div>
-    <div class="container-fluid">
+      <div class="content">
       <h1 style="background-color: orange; color: #000; font-size: 2em; text-align: center">NOT FOR PRODUCTION USE! NO REAL DATA!</h1>
       <%= yield %>
       <h1 style="background-color: orange; color: #000; font-size: 2em; text-align: center">NOT FOR PRODUCTION USE! NO REAL DATA!</h1>
-    </div>
+      </div>
     <%= render "layouts/footer" %>
   </body>
 </html>
