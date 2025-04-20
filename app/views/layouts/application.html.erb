@@ -23,6 +23,7 @@
   </head>
 
   <body>
+    <!-- FIXME: this is wonky. Only works until you click another link then have to reload the page to get it to work again. -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
     
@@ -54,9 +55,9 @@
       <% if alert %><p class="alert"><%= alert %></p><% end %>
     </div>
     <div class="container-fluid">
-      <h1 style="background-color: orange; text-align: center">NOT FOR PRODUCTION USE! NO REAL DATA!</h1>
+      <h1 style="background-color: orange; color: #000; font-size: 2em; text-align: center">NOT FOR PRODUCTION USE! NO REAL DATA!</h1>
       <%= yield %>
-      <h1 style="background-color: orange; text-align: center">NOT FOR PRODUCTION USE! NO REAL DATA!</h1>
+      <h1 style="background-color: orange; color: #000; font-size: 2em; text-align: center">NOT FOR PRODUCTION USE! NO REAL DATA!</h1>
     </div>
     <%= render "layouts/footer" %>
   </body>
