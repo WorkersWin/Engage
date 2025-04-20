@@ -11,32 +11,46 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name, autofocus: true, placeholder: "Event Name" %>
+  <div class="field">
+    <%= form.label :name, class: "label" %>
+    <div class="control">
+    <%= form.text_field :name, autofocus: true, placeholder: "Event Name", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :start_datetime, style: "display: block" %>
-    <%= form.datetime_field :start_datetime %>
+  <div class="field">
+    <%= form.label :start_datetime, class: "label" %>
+    <div class="control">
+    <%= form.datetime_field :start_datetime, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :end_datetime, style: "display: block" %>
-    <%= form.datetime_field :end_datetime %>
+  <div class="field">
+    <%= form.label :end_datetime, class: "label" %>
+    <div class="control">
+    <%= form.datetime_field :end_datetime, class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description, placeholder: "Event Description" %>
+  <div class="field">
+    <%= form.label :description, class: "label" %>
+    <div class="control">
+    <%= form.text_area :description, placeholder: "Event Description", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :event_type_id, style: "display: block" %>
-    <%= collection_select(:event, :event_type_id, EventType.all.order(:name), :id, :name, include_blank: true) %>
+  <div class="field">
+    <%= form.label :event_type_id, class: "label" %>
+    <div class="control">
+    <div class="select">
+    <%= collection_select(:event, :event_type_id, EventType.all.order(:name), :id, :name, {include_blank: true}, {}) %>
+  </div>
+  </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+  <div class="control">
+    <%= form.submit "Submit", class: "button is-link" %>
+  </div>
   </div>
 <% end %>

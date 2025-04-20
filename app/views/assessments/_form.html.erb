@@ -11,36 +11,54 @@
     </div>
   <% end %>
 
-  <div>
-    <%= assessment_form.label :assessed_on, style: "display: block" %>
-    <%= assessment_form.date_field :assessed_on %>
+  <div class="field">
+    <%= assessment_form.label :assessed_on, class: "label" %>
+  <div class="control">
+    <%= assessment_form.date_field :assessed_on, class: "date" %>
+  </div>
   </div>
 
-  <div>
-    <%= assessment_form.label :assessment_level_id, style: "display: block" %>
+  <div class="field">
+    <%= assessment_form.label :assessment_level_id, class: "label" %>
+  <div class="control">
+  <div class="select">
     <%= collection_select(:assessment, :assessment_level_id, AssessmentLevel.all.order(:level), :id, :level, include_blank: true) %>
   </div>
+  </div>
+  </div>
 
-  <div>
+  <div class="field">
     <br><strong>THIS IS BEING CHANGED TO AN INLINE SEARCH</strong><br>
-    <%= assessment_form.label :assessee_id, style: "display: block" %>
+    <%= assessment_form.label :assessee_id, class: "label" %>
+  <div class="control">
+  <div class="select">
     <%= collection_select(:assessment, :assessee_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
+  </div>
+  </div>
 
-  <div>
+  <div class="field">
     <br><strong>THIS IS BEING CHANGED TO AN INLINE SEARCH</strong><br>
-    <%= assessment_form.label :assessor_id, style: "display: block" %>
+    <%= assessment_form.label :assessor_id, class: "label" %>
+  <div class="control">
+  <div class="select">
     <%= collection_select(:assessment, :assessor_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
   </div>
-
-  <div>
-   <%= fields_for :note, @assessment.note do |note_form| %>
-     <%= note_form.label :note, style: "display: block" %>
-     <%= note_form.text_area :body %>
-   <% end %>
+  </div>
   </div>
 
-  <div>
-    <%= assessment_form.submit %>
+  <div class="field">
+   <%= fields_for :note, @assessment.note do |note_form| %>
+     <%= note_form.label :note, class: "label" %>
+  <div class="control">
+     <%= note_form.text_area :body, class: "textarea" %>
+   <% end %>
+  </div>
+  </div>
+
+  <div class="field">
+  <div class="control">
+    <%= assessment_form.submit "Submit", class: "button is-link" %>
+  </div>
   </div>
 <% end %>

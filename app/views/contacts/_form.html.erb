@@ -11,42 +11,58 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name, autofocus: true, placeholder: "First Name" %>
+  <div class="field">
+    <%= form.label :first_name, class: "label" %>
+  <div class="control">
+    <%= form.text_field :first_name, autofocus: true, placeholder: "First Name", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name, placeholder: "Last Name" %>
+  <div class="field">
+    <%= form.label :last_name, class: "label" %>
+  <div class="control">
+    <%= form.text_field :last_name, placeholder: "Last Name", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :pronouns, style: "display: block" %>
-    <%= form.text_field :pronouns, placeholder: "Pronouns" %>
+  <div class="field">
+    <%= form.label :pronouns, class: "label" %>
+  <div class="control">
+    <%= form.text_field :pronouns, placeholder: "Pronouns", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :personal_phone, style: "display: block" %>
-    <%= form.text_field :personal_phone, placeholder: "Personal Phone" %>
+  <div class="field">
+    <%= form.label :personal_phone, class: "label" %>
+  <div class="control">
+    <%= form.text_field :personal_phone, placeholder: "Personal Phone", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :personal_email, style: "display: block" %>
-    <%= form.text_field :personal_email, placeholder: "Personal Email" %>
+  <div class="field">
+    <%= form.label :personal_email, class: "label" %>
+  <div class="control">
+    <%= form.text_field :personal_email, placeholder: "Personal Email", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :work_username, style: "display: block" %>
-    <%= form.text_field :work_username, placeholder: "Work Username" %>
+  <div class="field">
+    <%= form.label :work_username, class: "label" %>
+  <div class="control">
+    <%= form.text_field :work_username, placeholder: "Work Username", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.label :work_email, style: "display: block" %>
-    <%= form.text_field :work_email, placeholder: "Work Email" %>
+  <div class="field">
+    <%= form.label :work_email, class: "label" %>
+  <div class="control">
+    <%= form.text_field :work_email, placeholder: "Work Email", class: "input" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+  <div class="control">
+    <%= form.submit "Create New Contact", class: "button is-link" %>
+  </div>
   </div>
 <% end %>
