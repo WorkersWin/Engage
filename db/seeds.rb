@@ -5,7 +5,8 @@
 puts "Start Seeding ..."
 
 puts "Start Admin User Seeding ..."
-User.create(username: "admin", email_address: "admin@example.com", password: "unionstrong!!", password_confirmation: "unionstrong!!")
+User.create!(username: "admin", email_address: "admin@example.com", password: "unionstrong!!", password_confirmation: "unionstrong!!")
+User.create!(username: "shannon", email_address: "shannonmariehauck@gmail.com", password: "unionstrong!!", password_confirmation: "unionstrong!!")
 
 puts "Start Organization Seeding ..."
 Organization.create(name: "Acme Corporation")

@@ -1,4 +1,5 @@
 <tr>
+  <td><% if contact.user %><%= link_to "User Account", contact.user %><% end %></td>
   <td><% if contact.first_name %><%= link_to contact.first_name, contact %><% end %></td>
   <td><% if contact.last_name %><%= link_to contact.last_name, contact %><% end %></td>
   <td><% if contact.pronouns %><%= link_to contact.pronouns, contact %><% end %></td>

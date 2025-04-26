@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
   get "changelog" => "pages#changelog"
   get "faq" => "pages#faq"
+  get "guide" => "pages#guide"
   get "license" => "pages#license"
   get "privacy" => "pages#privacy"
   get "guide" => "pages#guide"
