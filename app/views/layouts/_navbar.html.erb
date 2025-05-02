@@ -1,8 +1,8 @@
 <% if authenticated? %>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="">
-    <%= link_to image_tag("engage_logo.svg", alt: "Engage Logo"), dashboards_index_url, class: "navbar-item" %>
+    <%= link_to "Engage", root_path, class: "navbar-item" %>
+    <%#= link_to image_tag("engage_logo.svg", alt: "Engage Logo"), dashboards_index_url, class: "navbar-item" %>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -54,14 +54,26 @@
           <%= button_to "Sign Out", session_path, method: :delete, class: "navbar-item" %>
         </div>
       </div>
+
+<div class="navbar-item">
+        <select data-choose-theme class="focus:outline-none h-10 rounded-full px-3 border">
+                <option value="">Choose Theme</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="unionred">Union Red!</option>
+                <option value="hardboiled">Hardboiled</option>
+        </select>
+</div>
+
+
     </div>
   </div>
 </nav>
 <% else %>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="">
-    <%= link_to image_tag("engage_logo.svg"), dashboards_index_url, class: "navbar-item" %>
+    <%= link_to "Engage", root_path, class: "navbar-item" %>
+    <%#= link_to image_tag("engage_logo.svg"), dashboards_index_url, class: "navbar-item" %>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -74,6 +86,15 @@
     <div class="navbar-start">
       <%= link_to "Sign In", new_session_path, class: "navbar-item" %>
       <%= link_to "Join Us!", new_applicant_path, class: "navbar-item" %>
+<div class="navbar-item">
+        <select data-choose-theme class="focus:outline-none h-10 rounded-full px-3 border">
+                <option value="">Choose Theme</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="unionred">Union Red!</option>
+                <option value="hardboiled">Hardboiled</option>
+        </select>
+</div>
     </div>
   </div>
 </nav>
