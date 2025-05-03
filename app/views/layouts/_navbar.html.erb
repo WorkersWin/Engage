@@ -54,18 +54,17 @@
           <%= button_to "Sign Out", session_path, method: :delete, class: "navbar-item" %>
         </div>
       </div>
-
-<div class="navbar-item">
+      <div class="navbar-item">
         <select data-choose-theme class="focus:outline-none h-10 rounded-full px-3 border">
                 <option value="">Choose Theme</option>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="unionred">Union Red!</option>
+                <option value="pinkie">Pinkie</option>
                 <option value="hardboiled">Hardboiled</option>
+                <option value="unionreddark">Union Red(Dark)</option>
+                <option value="unionredlight">Union Red(Light)</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
         </select>
-</div>
-
-
+      </div>
     </div>
   </div>
 </nav>
@@ -86,15 +85,17 @@
     <div class="navbar-start">
       <%= link_to "Sign In", new_session_path, class: "navbar-item" %>
       <%= link_to "Join Us!", new_applicant_path, class: "navbar-item" %>
-<div class="navbar-item">
+      <div class="navbar-item">
         <select data-choose-theme class="focus:outline-none h-10 rounded-full px-3 border">
                 <option value="">Choose Theme</option>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="unionred">Union Red!</option>
+                <option value="pinkie">Pinkie</option>
                 <option value="hardboiled">Hardboiled</option>
+                <option value="unionreddark">Union Red(Dark)</option>
+                <option value="unionredlight">Union Red(Light)</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
         </select>
-</div>
+      </div>
     </div>
   </div>
 </nav>
