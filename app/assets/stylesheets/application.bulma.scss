@@ -82,7 +82,7 @@
   .footer {
     --bulma-footer-background-color: hsl(360 100% 100%);
   }
-  .slogan { color: #f00; font-weight: 900; margin-right: 75px; }
+  .slogan { color: #f00; font-weight: 900; }
 
   .trix-content pre { color: hsl(0 0% 0%); }
 
@@ -131,50 +131,7 @@
     --bulma-footer-background-color: hsla(320 100% 80% / 0.0);
     // --bulma-footer-color: hsla(320 100% 80% / 0.5);
   }
-  .slogan { color: #000; font-weight: 900; margin-right: 75px; }
-}
-
-// =======================================================
-@media (prefers-color-scheme: pinkie) {
-  :root {
-     html { background-color: hsla(320 100% 80% / 0.5); color: #000; }
-     body { background-color: hsla(320 100% 80% / 0.5); color: #000; }
-     
-     a:link, a:visited { color: hsl(320 100% 45%); }
-     a:hover { color: #fff; }
-  
-     --bulma-body-background-color: hsla(320 100% 80% / 0.5);
-  
-     .box {
-      --bulma-box-background-color: hsla(320 100% 80% / 0.5);
-      --bulma-box-color: #000;
-     }
-  
-     .content {
-       --bulma-box-background-color: hsla(320 100% 80% / 0.5);
-       --bulma-content-heading-color: hsl(0 0% 0%);
-     }
-  
-    .navbar {
-      --bulma-navbar-h: 360;
-      --bulma-navbar-s: 100%;
-      --bulma-navbar-item-color-l: 100%;
-      --bulma-navbar-item-selected-l: 5%;
-      --bulma-navbar-item-selected-background-l: 63%;
-      --bulma-navbar-background-color: hsl(320 100% 45%);
-    }
-  
-    .navbar-brand .navbar-item { color: #fff; }
-  
-    trix-editor {
-      background-color: #fff;
-    }
-    .footer {
-      --bulma-footer-background-color: hsla(320 100% 80% / 0.0);
-      // --bulma-footer-color: hsla(320 100% 80% / 0.5);
-    }
-    .slogan { color: #000; font-weight: 900; margin-right: 75px; }
-  }
+  .slogan { color: #000; font-weight: 900; }
 }
 
 // =======================================================
@@ -212,7 +169,7 @@
   .footer {
     --bulma-footer-background-color: hsl(0 0% 0%);
   }
-  .slogan { color: #f00; font-weight: 900; margin-right: 75px; }
+  .slogan { color: #f00; font-weight: 900; }
 }
 
 // =======================================================
@@ -223,7 +180,7 @@
 
   color: #000;
   a:link, a:visited { color: #f00; }
-  a:hover { color: #fff; }
+  a:hover { color: #000; }
 
   .input { background-color: hsl(360 100% 100%); color: hsl(360 100% 50%); }
 
@@ -252,16 +209,10 @@
   .footer {
     --bulma-footer-background-color: hsl(360 100% 100%);
   }
-  .slogan { color: #f00; font-weight: 900; margin-right: 75px; }
+  .slogan { color: #f00; font-weight: 900; }
 
   trix-editor {
     background-color: #fff;
-  }
-}
-
-// =======================================================
-@media (prefers-color-scheme: unionred) {
-  :root {
   }
 }
 
@@ -290,7 +241,7 @@
 .comment-author { font-size: 1em; padding-left: 5px; }
 .comment-content { font-size: 1em; padding-left: 5px; }
 
-.builtby { font-weight: 900; margin-left: 75px; }
+.builtby { font-weight: 900; }
 .poweredby { margin-left: 10px; }
 .copyright { font-weight: bold; margin-right: 10px; }
 
