@@ -123,6 +123,9 @@
   }
 
   .navbar-brand .navbar-item { color: #fff; }
+  .navbar a:link { color: hsl(360 100% 100%); }
+  .navbar a:visited { color: hsl(360 100% 100%); }
+  .navbar a:hover { color: hsl(0 0% 0%); }
 
   trix-editor {
     background-color: #fff;
