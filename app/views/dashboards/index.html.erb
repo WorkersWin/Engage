@@ -17,7 +17,7 @@
 
 <h2>Current Stats</h2>
 <ul>
-  <li><%= link_to pluralize(Contact.count, "Contact"), contacts_path %></li>
+  <li><%= link_to pluralize(number_with_delimiter(Contact.count), "Contact"), contacts_path %></li>
   <% if @assessments.present? %>
   <li>Current <%= link_to "Assessment", assessments_path %> Levels
     <ul>
