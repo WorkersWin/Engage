@@ -46,13 +46,6 @@ Organization.create(name: "Wonka Industries")
 Organization.create(name: "Yakonomo Corporation")
 Organization.create(name: "Yoyodyne Propulsion Systems")
 
-puts "Start Contact Seeding ..."
-Contact.create!(work_username: "one", first_name: "one", last_name: "one", personal_email: "one@example.com")
-Contact.create!(work_username: "two", first_name: "two", last_name: "two", personal_email: "one@example.com", personal_phone: "123")
-1000.times do |i|
-  Contact.create!(work_username: "work_username-#{i}", first_name: "#{i}_first_name", last_name: "#{i}_last_name", personal_email: "personal_email_#{i}", personal_phone: "cellphone_#{i}")
-end
-
 # General seeds
 puts "Start Applicant Seeding ..."
 Applicant.create!(first_name: "one", last_name: "email address matches existing uesr", personal_email: "one@example.com", personal_phone: "321123")
@@ -69,18 +62,6 @@ AssessmentLevel.create!(level: "2")
 AssessmentLevel.create!(level: "3")
 AssessmentLevel.create!(level: "HR")
 AssessmentLevel.create!(level: "MGR")
-
-puts "Start Assessment Seeding ..."
-Assessment.create!(assessed_on: "2020-01-01", assessment_level_id: 2, assessor_id: 1, assessee_id: 3)
-Assessment.create!(assessed_on: "2021-02-01", assessment_level_id: 1, assessor_id: 5, assessee_id: 3)
-Assessment.create!(assessed_on: "2025-01-25", assessment_level_id: 3, assessor_id: 10, assessee_id: 5)
-Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 4, assessor_id: 1, assessee_id: 8)
-Assessment.create!(assessed_on: "2025-03-04", assessment_level_id: 5, assessor_id: 11, assessee_id: 20)
-Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 1, assessor_id: 12, assessee_id: 32)
-Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 2, assessor_id: 14, assessee_id: 44)
-Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 3, assessor_id: 15, assessee_id: 50)
-Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 5, assessor_id: 16, assessee_id: 13)
-Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 2, assessor_id: 17, assessee_id: 23)
 
 puts "Start Event Type Seeding ..."
 EventType.create(name: "Lunch")
@@ -2678,5 +2659,32 @@ City.create(name: "Ten Sleep", state_id: state.id)
 City.create(name: "Thermopolis", state_id: state.id)
 City.create(name: "Torrington", state_id: state.id)
 City.create(name: "Worland", state_id: state.id)
+
+
+
+
+
+puts "Start Contact Seeding ..."
+Contact.create!(work_username: "one", first_name: "one", last_name: "one", personal_email: "one@example.com")
+Contact.create!(work_username: "two", first_name: "two", last_name: "two", personal_email: "one@example.com", personal_phone: "123")
+rounds = 1000
+(1..rounds).each do |x|
+  (1..1000).each do |i|
+    Contact.create!(work_username: "work_username-#{x}-#{i}", first_name: "#{x}-#{i}_first_name", last_name: "#{x}-#{i}_last_name", personal_email: "personal_email_#{x}-#{i}", personal_phone: "cellphone_#{x}-#{i}")
+  end
+  puts "Contact Seeds: Round #{x} of #{rounds} Complete"
+end
+
+puts "Start Assessment Seeding ..."
+Assessment.create!(assessed_on: "2020-01-01", assessment_level_id: 2, assessor_id: 1, assessee_id: 3)
+Assessment.create!(assessed_on: "2021-02-01", assessment_level_id: 1, assessor_id: 5, assessee_id: 3)
+Assessment.create!(assessed_on: "2025-01-25", assessment_level_id: 3, assessor_id: 10, assessee_id: 5)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 4, assessor_id: 1, assessee_id: 8)
+Assessment.create!(assessed_on: "2025-03-04", assessment_level_id: 5, assessor_id: 11, assessee_id: 20)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 1, assessor_id: 12, assessee_id: 32)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 2, assessor_id: 14, assessee_id: 44)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 3, assessor_id: 15, assessee_id: 50)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 5, assessor_id: 16, assessee_id: 13)
+Assessment.create!(assessed_on: "2025-03-03", assessment_level_id: 2, assessor_id: 17, assessee_id: 23)
 
 puts "Finished Seeding"

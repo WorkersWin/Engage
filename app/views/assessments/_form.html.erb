@@ -30,21 +30,17 @@
   <div class="field">
     <br><strong>THIS IS BEING CHANGED TO AN INLINE SEARCH</strong><br>
     <%= assessment_form.label :assessee_id, class: "label" %>
-  <div class="control">
-  <div class="select">
-    <%= collection_select(:assessment, :assessee_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
-  </div>
-  </div>
+    <div class="control">
+      <%= assessment_form.text_field :assessee_id %>
+    </div>
   </div>
 
   <div class="field">
     <br><strong>THIS IS BEING CHANGED TO AN INLINE SEARCH</strong><br>
     <%= assessment_form.label :assessor_id, class: "label" %>
-  <div class="control">
-  <div class="select">
-    <%= collection_select(:assessment, :assessor_id, Contact.all.order(:first_name), :id, :display_name, include_blank: true) %>
-  </div>
-  </div>
+    <div class="control">
+    <%= assessment_form.text_field :assessor_id %>
+    </div>
   </div>
 
   <div class="field">
